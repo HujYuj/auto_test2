@@ -1,0 +1,2381 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<RoutesTable>
+	<RadioModules>
+		<!--Gen3-->
+		<Unit id="0" RFPlatform="Gen3">AEQA</Unit>
+		<Unit id="1" RFPlatform="Gen3">AEQD</Unit>
+		<Unit id="2" RFPlatform="Gen3">AEHA</Unit>
+		<!--Compass-->
+		<Unit id="3" RFPlatform="Compass">AAHF</Unit>
+		<Unit id="4" RFPlatform="Compass">AAHJ</Unit>
+		<!--Gen5 MADE-->
+		<Unit id="5" RFPlatform="Master">AEQB</Unit>
+		<Unit id="6" RFPlatform="Amber">AEQV</Unit>
+		<Unit id="7" RFPlatform="Master">AEQE</Unit>
+		<Unit id="8" RFPlatform="Amber">AEQZ</Unit>
+		<Unit id="9" RFPlatform="Amber">AEQQ</Unit>
+		<Unit id="10" RFPlatform="Amber">AEQC</Unit>
+		<Unit id="11" RFPlatform="Master">AEQI</Unit>
+		<Unit id="12" RFPlatform="Master">AEQP</Unit>
+		<Unit id="13" RFPlatform="Amber">AEQY</Unit>
+		<Unit id="14" RFPlatform="CompassSplitMode">AAHF_SplitMode</Unit>
+		<Unit id="15" RFPlatform="MasterSplit">AEQJ</Unit>
+	</RadioModules>
+	<!--PlatformRoutes><><TRX></TRX></PlatformRoutes-->
+	<Gen3Routes>
+		<TRX id="0">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x01234567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x89ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xA0110</RouteCommand>
+		</TRX>
+		<TRX id="1">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x81234567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x09ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xA0110</RouteCommand>
+		</TRX>
+		<TRX id="2">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x01234567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x89ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xB0110</RouteCommand>
+		</TRX>
+		<TRX id="3">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x81234567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x09ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xB0110</RouteCommand>
+		</TRX>
+		<TRX id="4">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x18234567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x09ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xA0110</RouteCommand>
+		</TRX>
+		<TRX id="5">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x98234567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xA0110</RouteCommand>
+		</TRX>
+		<TRX id="6">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x18234567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x09ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xB0110</RouteCommand>
+		</TRX>
+		<TRX id="7">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x98234567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xB0110</RouteCommand>
+		</TRX>
+		<TRX id="8">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x28934567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xA0110</RouteCommand>
+		</TRX>
+		<TRX id="9">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xA8934567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x012BCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xA0110</RouteCommand>
+		</TRX>
+		<TRX id="10">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x28934567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xB0110</RouteCommand>
+		</TRX>
+		<TRX id="11">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xA8934567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x012BCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xB0110</RouteCommand>
+		</TRX>
+		<TRX id="12">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x389A4567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x012BCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xA0110</RouteCommand>
+		</TRX>
+		<TRX id="13">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xB89A4567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x0123CDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xA0110</RouteCommand>
+		</TRX>
+		<TRX id="14">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x389A4567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x012BCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xB0110</RouteCommand>
+		</TRX>
+		<TRX id="15">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xB89A4567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x0123CDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xB0110</RouteCommand>
+		</TRX>
+		<TRX id="16">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x489AB567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x0123CDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xA0110</RouteCommand>
+		</TRX>
+		<TRX id="17">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xC89AB567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01234DEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xA0110</RouteCommand>
+		</TRX>
+		<TRX id="18">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x489AB567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x0123CDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xB0110</RouteCommand>
+		</TRX>
+		<TRX id="19">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xC89AB567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01234DEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xB0110</RouteCommand>
+		</TRX>
+		<TRX id="20">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x589ABC67</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01234DEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xA0110</RouteCommand>
+		</TRX>
+		<TRX id="21">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xD89ABC67</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x012345EF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xA0110</RouteCommand>
+		</TRX>
+		<TRX id="22">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x589ABC67</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01234DEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xB0110</RouteCommand>
+		</TRX>
+		<TRX id="23">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xD89ABC67</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x012345EF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xB0110</RouteCommand>
+		</TRX>
+		<TRX id="24">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x689ABCD7</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x012345EF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xA0110</RouteCommand>
+		</TRX>
+		<TRX id="25">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xE89ABCD7</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x0123456F</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xA0110</RouteCommand>
+		</TRX>
+		<TRX id="26">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x689ABCD7</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x012345EF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xB0110</RouteCommand>
+		</TRX>
+		<TRX id="27">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xE89ABCD7</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x0123456F</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xB0110</RouteCommand>
+		</TRX>
+		<TRX id="28">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x789ABCDE</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x0123456F</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xA0110</RouteCommand>
+		</TRX>
+		<TRX id="29">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xF89ABCDE</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01234567</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xA0110</RouteCommand>
+		</TRX>
+		<TRX id="30">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x789ABCDE</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x0123456F</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xB0110</RouteCommand>
+		</TRX>
+		<TRX id="31">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xF89ABCDE</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01234567</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xB0110</RouteCommand>
+		</TRX>
+		<TRX id="32">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x01234567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x89ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+		</TRX>
+		<TRX id="33">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x81234567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x09ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+		</TRX>
+		<TRX id="34">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x01234567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x89ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+		</TRX>
+		<TRX id="35">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x81234567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x09ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+		</TRX>
+		<TRX id="36">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x18234567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x09ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+		</TRX>
+		<TRX id="37">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x98234567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+		</TRX>
+		<TRX id="38">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x18234567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x09ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+		</TRX>
+		<TRX id="39">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x98234567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+		</TRX>
+		<TRX id="40">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x28934567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+		</TRX>
+		<TRX id="41">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xA8934567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x012BCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+		</TRX>
+		<TRX id="42">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x28934567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01ABCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+		</TRX>
+		<TRX id="43">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xA8934567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x012BCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+		</TRX>
+		<TRX id="44">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x389A4567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x012BCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+		</TRX>
+		<TRX id="45">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xB89A4567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x0123CDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+		</TRX>
+		<TRX id="46">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x389A4567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x012BCDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+		</TRX>
+		<TRX id="47">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xB89A4567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x0123CDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+		</TRX>
+		<TRX id="48">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x489AB567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x0123CDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+		</TRX>
+		<TRX id="49">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xC89AB567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01234DEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+		</TRX>
+		<TRX id="50">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x489AB567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x0123CDEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+		</TRX>
+		<TRX id="51">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xC89AB567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01234DEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+		</TRX>
+		<TRX id="52">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x589ABC67</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01234DEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+		</TRX>
+		<TRX id="53">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xD89ABC67</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x012345EF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+		</TRX>
+		<TRX id="54">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x589ABC67</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01234DEF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+		</TRX>
+		<TRX id="55">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xD89ABC67</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x012345EF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+		</TRX>
+		<TRX id="56">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x689ABCD7</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x012345EF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+		</TRX>
+		<TRX id="57">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xE89ABCD7</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x0123456F</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+		</TRX>
+		<TRX id="58">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x689ABCD7</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x012345EF</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+		</TRX>
+		<TRX id="59">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xE89ABCD7</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x0123456F</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+		</TRX>
+		<TRX id="60">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x789ABCDE</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x0123456F</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+		</TRX>
+		<TRX id="61">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xF89ABCDE</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01234567</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+		</TRX>
+		<TRX id="62">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x789ABCDE</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x0123456F</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+		</TRX>
+		<TRX id="63">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0xF89ABCDE</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x01234567</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+		</TRX>
+	</Gen3Routes>
+
+	<CompassRoutes>
+		<TRX id="0">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x08124567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDABCE9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>
+		</TRX>
+		<TRX id="1">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x08124567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDABCE9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>
+		</TRX>
+		<TRX id="2">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x19420567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8EC</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>
+		</TRX>
+		<TRX id="3">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x19420567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8EC</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>
+		</TRX>
+		<TRX id="4">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x2A140567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDCB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>
+		</TRX>
+		<TRX id="5">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x2A140567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDCB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>
+		</TRX>
+		<TRX id="6">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x3B120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDAC8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>
+		</TRX>
+		<TRX id="7">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x3B120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDAC8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>
+		</TRX>
+		<TRX id="8">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x4C120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>
+		</TRX>
+		<TRX id="9">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x4C120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>
+		</TRX>
+		<TRX id="10">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x5D120467</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FCAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>
+		</TRX>
+		<TRX id="11">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x5D120467</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FCAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>
+		</TRX>
+		<TRX id="12">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x6E120547</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8C9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>
+		</TRX>
+		<TRX id="13">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x6E120547</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8C9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>
+		</TRX>
+		<TRX id="14">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x7F120564</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3CDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>
+		</TRX>
+		<TRX id="15">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x7F120564</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3CDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>
+		</TRX>
+		<TRX id="16">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x08124567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDABCE9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>
+		</TRX>
+		<TRX id="17">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x08124567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDABCE9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>
+		</TRX>
+		<TRX id="18">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x19420567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8EC</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>
+		</TRX>
+		<TRX id="19">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x19420567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8EC</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>
+		</TRX>
+		<TRX id="20">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x2A140567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDCB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>
+		</TRX>
+		<TRX id="21">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x2A140567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDCB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>
+		</TRX>
+		<TRX id="22">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x3B120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDAC8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>
+		</TRX>
+		<TRX id="23">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x3B120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDAC8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>
+		</TRX>
+		<TRX id="24">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x4C120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>
+		</TRX>
+		<TRX id="25">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x4C120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>
+		</TRX>
+		<TRX id="26">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x5D120467</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FCAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>
+		</TRX>
+		<TRX id="27">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x5D120467</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FCAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>
+		</TRX>
+		<TRX id="28">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x6E120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>
+		</TRX>
+		<TRX id="29">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x6E120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>
+		</TRX>
+		<TRX id="30">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x7F120564</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3CDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>
+		</TRX>
+		<TRX id="31">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x7F120564</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3CDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>
+		</TRX>
+		<TRX id="32">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x08231567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDBc9EA</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>
+		</TRX>
+		<TRX id="33">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x08231567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDBc9EA</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>
+		</TRX>
+		<TRX id="34">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x19230567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDBc8EA</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>
+		</TRX>
+		<TRX id="35">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x19230567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDBc8EA</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>
+		</TRX>
+		<TRX id="36">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x2A130567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDBc8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>
+		</TRX>
+		<TRX id="37">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x2A130567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDBc8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>
+		</TRX>
+		<TRX id="38">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x3B120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDAc8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>
+		</TRX>
+		<TRX id="39">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x3B120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDAc8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>
+		</TRX>
+		<TRX id="40">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x4C120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>
+		</TRX>
+		<TRX id="41">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x4C120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>
+		</TRX>
+		<TRX id="42">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x5D120467</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FCAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>
+		</TRX>
+		<TRX id="43">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x5D120467</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FCAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>
+		</TRX>
+		<TRX id="44">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x6E120547</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8C9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>
+		</TRX>
+		<TRX id="45">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x6E120547</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8C9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>
+		</TRX>
+		<TRX id="46">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x7F120564</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3CDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>
+		</TRX>
+		<TRX id="47">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x7F120564</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3CDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>
+		</TRX>
+		<TRX id="48">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x08231567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDBc9EA</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>
+		</TRX>
+		<TRX id="49">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x08231567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDBc9EA</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>
+		</TRX>
+		<TRX id="50">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x19230567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDBc8EA</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>
+		</TRX>
+		<TRX id="51">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x19230567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDBc8EA</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>
+		</TRX>
+		<TRX id="52">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x2A130567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDBc8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>
+		</TRX>
+		<TRX id="53">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x2A130567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDBc8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>
+		</TRX>
+		<TRX id="54">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x3B120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDAc8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>
+		</TRX>
+		<TRX id="55">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x3B120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x4FDAc8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>
+		</TRX>
+		<TRX id="56">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x4C120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>
+		</TRX>
+		<TRX id="57">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x4C120567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>
+		</TRX>
+		<TRX id="58">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x5D120467</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FCAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>
+		</TRX>
+		<TRX id="59">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x5D120467</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FCAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>
+		</TRX>
+		<TRX id="60">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x6E120547</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8C9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>
+		</TRX>
+		<TRX id="61">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x6E120547</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3FDAB8C9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>
+		</TRX>
+		<TRX id="62">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x7F120564</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3CDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>
+		</TRX>
+		<TRX id="63">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x7F120564</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa0000a0c 32 0x3CDAB8E9</RouteCommand>
+			<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>
+		</TRX>
+	</CompassRoutes>
+
+	<CompassSplitModeRoutes>
+		<TRX id="0">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x04123567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>		
+		</TRX>
+		<TRX id="1">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x04123567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>		
+		</TRX>
+		<TRX id="2">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x15420367</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>		
+		</TRX>
+		<TRX id="3">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x15420367</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>		
+		</TRX>
+		<TRX id="4">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x26140537</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>		
+		</TRX>
+		<TRX id="5">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x26140537</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>		
+		</TRX>
+		<TRX id="6">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x37120564</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>		
+		</TRX>
+		<TRX id="7">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x37120564</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0x80100</RouteCommand>		
+		</TRX>
+
+		<TRX id="16">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x04123567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>		
+		</TRX>
+		<TRX id="17">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x04123567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>		
+		</TRX>
+		<TRX id="18">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x15420367</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>		
+		</TRX>
+		<TRX id="19">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x15420367</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>		
+		</TRX>
+		<TRX id="20">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x26140537</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>		
+		</TRX>
+		<TRX id="21">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x26140537</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>		
+		</TRX>
+		<TRX id="22">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x37120564</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>		
+		</TRX>
+		<TRX id="23">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x37120564</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0x90100</RouteCommand>		
+		</TRX>
+
+		<TRX id="32">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x04123567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>		
+		</TRX>
+		<TRX id="33">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x04123567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>		
+		</TRX>
+		<TRX id="34">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x15420367</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>		
+		</TRX>
+		<TRX id="35">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x15420367</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>		
+		</TRX>
+		<TRX id="36">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x26140537</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>		
+		</TRX>
+		<TRX id="37">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x26140537</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>		
+		</TRX>
+		<TRX id="38">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x37120564</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>		
+		</TRX>
+		<TRX id="39">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x37120564</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0xa0100</RouteCommand>		
+		</TRX>	
+
+		<TRX id="48">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x04123567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>		
+		</TRX>	
+		<TRX id="49">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x04123567</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>		
+		</TRX>	
+		<TRX id="50">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x15420367</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>		
+		</TRX>
+		<TRX id="51">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x15420367</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>		
+		</TRX>
+		<TRX id="52">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x26140537</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>		
+		</TRX>
+		<TRX id="53">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x26140537</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>		
+		</TRX>
+		<TRX id="54">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x37120564</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>		
+		</TRX>
+		<TRX id="55">
+			<RouteCommand id="0">/sbin/devmem 0xa0000a08 32 0x37120564</RouteCommand>
+			<RouteCommand id="1">/sbin/devmem 0xa000120c 32 0xb0100</RouteCommand>		
+		</TRX>
+	</CompassSplitModeRoutes>
+
+	<MasterRoutes>
+		<TRX id="0">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x00110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3E87FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="1">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x10110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3E97FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="2">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x20110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3EA7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="3">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x30110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3EB7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="4">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x40110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3EC7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="5">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x50110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3ED7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="6">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x60110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3EE7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="7">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x70110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3EF7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="8">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F07FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="9">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F17FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="10">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F27FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="11">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F37FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="12">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xc0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F47FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="13">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xd0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F57FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="14">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xe0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F67FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="15">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xf0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F77FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="16">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x00110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F87FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="17">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x10110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F97FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="18">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x20110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3FA7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="19">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x30110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3FB7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="20">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x40110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3FC7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="21">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x50110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3FD7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="22">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x60110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3FE7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="23">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x70110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3FF7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="24">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x4007FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="25">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x4017FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="26">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x4027FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="27">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x4037FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="28">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xc0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x4047FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="29">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xd0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x4057FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="30">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xe0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x4067FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="31">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xf0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 0</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 6</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x4077FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="32">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x00110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3E87FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="33">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x10110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3E97FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="34">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x20110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3EA7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="35">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x30110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3EB7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="36">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x40110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3EC7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="37">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x50110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3ED7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="38">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x60110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3EE7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="39">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x70110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3EF7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="40">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F07FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="41">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F17FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="42">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F27FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="43">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F37FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="44">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xc0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F47FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="45">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xd0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F57FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="46">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xe0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F67FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="47">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xf0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F77FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="48">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x00110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F87FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="49">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x10110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3F97FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="50">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x20110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3FA7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="51">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x30110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3FB7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="52">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x40110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3FC7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="53">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x50110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3FD7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="54">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x60110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3FE7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="55">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x70110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x3FF7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="56">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x80110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x4007FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="57">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0x90110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x4017FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="58">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xa0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x4027FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="59">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xb0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x4037FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="60">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xc0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x4047FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="61">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xd0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x4057FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="62">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xe0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x4067FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="63">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xf9040204 32 0x08</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x07</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa000120c 32 0xf0110</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xf9040200 32 5</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xa0002160 32 0x4077FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+	</MasterRoutes>
+
+	<AmberRoutes>
+		<TRX id="0">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x00100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x2000</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x06</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x05</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3E87FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="1">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x10100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x2000</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x06</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x05</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3E97FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="2">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x20100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x2000</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x06</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x05</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3EA7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="3">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x30100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x2000</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x06</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x05</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3EB7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="4">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x40100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x2000</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x06</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x05</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3EC7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="5">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x50100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x2000</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x06</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x05</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3ED7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="6">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x60100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x2000</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x06</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x05</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3EE7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="7">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x70100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x2000</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x06</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x05</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3EF7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="8">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x80100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x2000</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x06</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x05</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3F07FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="9">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x90100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x2000</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x06</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x05</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3F17FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="10">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0xA0100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x2000</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x06</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x05</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3F27FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="11">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0xB0100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x2000</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x06</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x05</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3F37FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="12">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0xC0100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x2000</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x06</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x05</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3F47FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="13">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0xD0100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x2000</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x06</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x05</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3F57FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="14">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0xE0100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x2000</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x06</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x05</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3F67FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="15">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0xF0100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x2000</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x06</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x05</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3F77FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="16">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x00100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x2000</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3E87FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="17">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x10100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x2000</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3E97FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="18">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x20100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x2000</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3EA7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="19">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x30100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x2000</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3EB7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="20">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x40100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x2000</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3EC7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="21">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x50100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x2000</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3ED7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="22">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x60100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x2000</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3EE7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="23">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x70100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x2000</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3EF7FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="24">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x80100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x2000</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3F07FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="25">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0x90100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x2000</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3F17FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="26">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0xA0100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x2000</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3F27FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="27">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0xB0100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x2000</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3F37FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="28">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0xC0100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x2000</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3F47FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="29">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0xD0100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x2000</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3F57FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="30">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0xE0100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x2000</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3F67FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="31">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xA000120c 32 0xF0100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xA0001820 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xA0001824 32 0x2000</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x05</RouteCommand>
+				<RouteCommand id="4">/sbin/devmem 0xf9040204 32 0x06</RouteCommand>
+			</Beamforming>
+			<Beamforming isOn="true">
+				<RouteCommand id="0">/sbin/devmem 0xa0002160 32 0x3F77FFF</RouteCommand>
+			</Beamforming>
+		</TRX>
+	</AmberRoutes>
+	
+	<MasterSplitRoutes>
+		<TRX id="0">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x000100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="1">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x000100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="2">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x100100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="3">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x100100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="4">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x010100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="5">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x010100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="6">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x110100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="7">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x110100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="8">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x020100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="9">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x020100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="10">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x120100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="11">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x120100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="12">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x030100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="13">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x030100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="14">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x130100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="15">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x130100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="16">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x000100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040444 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040204 32 0x96</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="17">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x000100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf904020c 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf904044c 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf904020c 32 0x98</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="18">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x100100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040444 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040204 32 0x96</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="19">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x100100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040444 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040204 32 0x96</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="20">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x010100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040444 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040204 32 0x96</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="21">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x010100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf904020c 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf904044c 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf904020c 32 0x98</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="22">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x110100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040444 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040204 32 0x96</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="23">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x110100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf904020c 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf904044c 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf904020c 32 0x98</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="24">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x020100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040444 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040204 32 0x96</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="25">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x020100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf904020c 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf904044c 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf904020c 32 0x98</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="26">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x120100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040444 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040204 32 0x96</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="27">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x120100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf904020c 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf904044c 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf904020c 32 0x98</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="28">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x030100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040444 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040204 32 0x96</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="29">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x030100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf904020c 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf904044c 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf904020c 32 0x98</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="30">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x130100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040204 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040444 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040204 32 0x96</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="31">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x130100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf904020c 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf904044c 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf904020c 32 0x98</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="32">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x000100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="33">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x000100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="34">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x100100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="35">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x100100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="36">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x010100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="37">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x010100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="38">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x110100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="39">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x110100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="40">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x020100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="41">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x020100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="42">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x120100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="43">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x120100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="44">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x030100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="45">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x030100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="46">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x130100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="47">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x130100</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="48">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x000100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040440 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x95</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="49">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x000100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040208 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040448 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040208 32 0x97</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="50">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x100100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040440 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x95</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="51">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x100100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040208 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040448 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040208 32 0x97</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="52">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x010100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040440 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x95</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="53">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x010100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040208 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040448 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040208 32 0x97</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="54">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x110100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040440 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x95</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="55">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x110100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040208 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040448 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040208 32 0x97</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="56">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x020100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040440 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x95</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="57">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x020100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040208 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040448 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040208 32 0x97</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="58">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x120100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040440 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x95</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="59">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x120100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040208 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040448 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040208 32 0x97</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="60">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x030100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040440 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x95</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="61">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x030100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040208 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040448 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040208 32 0x97</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="62">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x130100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040200 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040440 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040200 32 0x95</RouteCommand>
+			</Beamforming>
+		</TRX>
+		<TRX id="63">
+			<Beamforming isOn="false">
+				<RouteCommand id="0">/sbin/devmem 0xa000120c 32 0x130100</RouteCommand>
+				<RouteCommand id="1">/sbin/devmem 0xf9040208 32 0x0</RouteCommand>
+				<RouteCommand id="2">/sbin/devmem 0xf9040448 32 0x0</RouteCommand>
+				<RouteCommand id="3">/sbin/devmem 0xf9040208 32 0x97</RouteCommand>
+			</Beamforming>
+		</TRX>
+	</MasterSplitRoutes>
+</RoutesTable>

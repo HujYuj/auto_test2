@@ -1,0 +1,82 @@
+cd /var/tmp && chmod 777 *
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -w 0x16 -v 0x04
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x11b
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x11a
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x119
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x118
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x11f
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x11e
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x11d
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x11c
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0xee
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0xa2
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0xa4
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -w 0x16 -v 0x00
+sleep 0.1
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -w 0x16 -v 0x08
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x11b
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x11a
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x119
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x118
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x11f
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x11e
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x11d
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x11c
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0xee
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0xa2
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0xa4
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -w 0x16 -v 0x00
+sleep 0.1
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -w 0x16 -v 0x04
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x11b
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x11a
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x119
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x118
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x11f
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x11e
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x11d
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x11c
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0xee
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0xa2
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0xa4
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -w 0x16 -v 0x00
+sleep 0.1
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -w 0x16 -v 0x08
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x11b
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x11a
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x119
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x118
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x11f
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x11e
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x11d
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x11c
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0xee
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0xa2
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0xa4
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -w 0x16 -v 0x00
+sleep 0.1
+/sbin/devmem 0xfc980270
+/sbin/devmem 0xfc980274
+/sbin/devmem 0xfc980278
+/sbin/devmem 0xfc980294
+/sbin/devmem 0xfc98027C
+/sbin/devmem 0xfc980280
+/sbin/devmem 0xfc980288
+/sbin/devmem 0xfc98028C
+/sbin/devmem 0xfc980290
+/sbin/devmem 0xfc98026C
+/sbin/devmem 0xfc980264
+/sbin/devmem 0xfc980268
+sleep 0.1
+/sbin/devmem 0xfc980094
+/sbin/devmem 0xfc980098
+/sbin/devmem 0xfc98009c
+/sbin/devmem 0xfc9800a0
+/sbin/devmem 0xfc9800a4
+/sbin/devmem 0xfc9800a8
+/sbin/devmem 0xfc9800ac
+/sbin/devmem 0xfc9800b0
+/sbin/devmem 0xfc9800b8
+/sbin/devmem 0xfc9800bc
+/sbin/devmem 0xfc9800c0
+/sbin/devmem 0xfc9800c4

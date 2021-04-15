@@ -1,0 +1,769 @@
+2021-01-15 00:20:25,077:INFO:this is serial logger
+2021-01-15 00:20:29,079:INFO:
+U-Boot SPL 2017.09+gitAUTOINC+c0cfd0b4df-nokia-r153 (Dec 31 2020 - 06:53:42)
+MPU         1200000 kHz
+L3 main     400000 kHz
+Main VCO    1200000 kHz
+Per VCO     2000000 kHz
+EOSC1       125000 kHz
+HPS MMC     100 kHz
+UART        100000 kHz
+
+2021-01-15 00:20:32,081:INFO:DDR: emif_clear() failed
+DDR: 2048 MiB
+QSPI: Reference clock at 400000000 Hz
+Stratix10 boot info:
+	Last power-on reset triggered by SDM: true
+	Last reset type: SDM power-on reset
+	Debug reset triggered: false
+	CS DAP reset triggered: false
+Trying to boot from SPI
+RSU current image:  0x03400000
+RSU state:          0x00000000
+RSU error location: 0x00000000
+RSU error details:  0x00000000
+RSU SSBL partition SSBL.PROD000001 at address 0x02200000.
+
+
+U-Boot 2017.09+gitAUTOINC+c0cfd0b4df-nokia-r153 (Dec 31 2020 - 06:53:42 +0000)socfpga_stratix10_aeqb
+
+CPU:   Intel FPGA SoCFPGA Platform
+FPGA:  Intel FPGA Stratix 10
+Model: Nokia AEQB
+       Watchdog enabled
+MTest: Memory test flags not setted
+DRAM:  2 GiB
+De-Assert EMAC0, EMAC1, EMAC2...OK
+Stratix10 boot info:
+	Last power-on reset triggered by SDM: true
+	Last reset type: SDM power-on reset
+	Debug reset triggered: false
+	CS DAP reset triggered: false
+	Clear reset status:0x0
+MMC:   
+Using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Model: Nokia AEQB
+Net:   
+Warning: ethernet@ff800000 (eth0) using random MAC address - fe:25:6a:3c:28:c8
+eth0: ethernet@ff800000
+PowerOn or HW or L4WD0 reset, Reset the made
+Taking peripheral out of reset ... OK
+Configuring Marvell 88E1512 PHY ... OK
+Configuring Ethernet Switch ... OK
+SF: Detected mt25qu02g with page size 256 Bytes, erase size 64 KiB, total 256 MiB
+Slot: selecting slot1
+SPTs are GOOD!!!
+CPBs are GOOD!!!
+Autoboot in 3 seconds
+
+2021-01-15 00:20:35,085:INFO:gpio: pin 0 (gpio 0) value is 1
+SF: Detected mt25qu02g with page size 256 Bytes, erase size 64 KiB, total 256 MiB
+ubi0: attaching mtd2
+ubi0: scanning is finished
+ubi0: attached mtd2 (name "mtd=0", size 256 MiB)
+ubi0: PEB size: 65536 bytes (64 KiB), LEB size: 65408 bytes
+ubi0: min./max. I/O unit sizes: 1/256, sub-page size 1
+ubi0: VID header offset: 64 (aligned 64), data offset: 128
+ubi0: good PEBs: 4096, bad PEBs: 0, corrupted PEBs: 0
+ubi0: user volume: 2, internal volumes: 1, max. volumes count: 128
+ubi0: max/mean erase counter: 7/5, WL threshold: 4096, image sequence number: 2575912687
+ubi0: available PEBs: 504, total reserved PEBs: 3592, PEBs reserved for bad PEB handling: 0
+Read 0 bytes from volume slot1_sw to 30000000
+No size specified -> Using max size (66799200)
+
+2021-01-15 00:21:01,101:INFO:## Copying 'fdt' subimage from FIT image at 30000000 ...
+crc32+ sha1+    Loading part 253 ... OK
+FDT fixup successful
+## Loading kernel from FIT Image at 30000000 ...
+   Using 'socfpga@0' configuration
+   Trying 'kernel@0' kernel subimage
+     Description:  Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x300000e4
+     Data Size:    14782976 Bytes = 14.1 MiB
+     Architecture: AArch64
+     OS:           Linux
+     Load Address: 0x01080000
+     Entry Point:  0x01080000
+     Hash algo:    crc32
+     Hash value:   19822168
+     Hash algo:    sha1
+     Hash value:   6efb939f2e06e42b4d861a29c44972ca77b7d106
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+## Loading ramdisk from FIT Image at 30000000 ...
+   Using 'socfpga@0' configuration
+   Trying 'rootfs@0' ramdisk subimage
+     Description:  Root Filesystem CPIO archive Gzipped
+     Type:         RAMDisk Image
+     Compression:  uncompressed
+     Data Start:   0x30e1daf8
+     Data Size:    51996152 Bytes = 49.6 MiB
+     Architecture: AArch64
+     OS:           Linux
+     Load Address: 0x20000000
+     Entry Point:  unavailable
+     Hash algo:    crc32
+     Hash value:   070fe5cf
+     Hash algo:    sha1
+     Hash value:   1bd2e3af4f0803daf92fcd7e4aed62be6e5945fd
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+   Loading ramdisk from 0x30e1daf8 to 0x20000000
+## Flattened Device Tree blob at 08000000
+   Booting using the fdt blob at 0x8000000
+   Loading Kernel Image ... OK
+   Loading Ramdisk to 15a69000, end 18bff5f8 ... OK
+   reserving fdt memory region: addr=8000000 size=9000
+   Loading Device Tree to 0000000015a5d000, end 0000000015a68fff ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.12.29-nokia-r91 (oe-user@oe-host) (gcc version 7.3.0 (GCC) ) #1 SMP PREEMPT Wed Dec 23 10:29:41 UTC 2020
+[    0.000000] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000] Machine model: SoCFPGA Stratix 10 AEQB
+[    0.000000] earlycon: uart0 at MMIO32 0x00000000ffc02000 (options '115200n8')
+[    0.000000] bootconsole [uart0] enabled
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] Reserved memory: created DMA memory pool at 0x0000000000000000, size 16 MiB
+[    0.000000] OF: reserved mem: initialized node svcbuffer@0, compatible id shared-dma-pool
+[    0.000000] cma: Reserved 16 MiB at 0x0000000078800000
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv65535.65535 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.0
+[    0.000000] percpu: Embedded 22 pages/cpu @(____ptrval____) s52888 r8192 d29032 u90112
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 486612
+[    0.000000] Kernel command line: earlyprintk earlycon syscon_enable=1 console=ttyS0,115200n8 rdinit=/sbin/init rw initrd=0x20000000,0x8000000 runningVolName=slot1_sw
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.000000] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.000000] Memory: 1727456K/1977344K available (9724K kernel code, 1188K rwdata, 2528K rodata, 960K init, 741K bss, 233504K reserved, 16384K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     modules : 0xffff000000000000 - 0xffff000008000000   (   128 MB)
+[    0.000000]     vmalloc : 0xffff000008000000 - 0xffff7dffbfff0000   (129022 GB)
+[    0.000000]       .text : 0x(____ptrval____) - 0x(____ptrval____)   (  9728 KB)
+[    0.000000]     .rodata : 0x(____ptrval____) - 0x(____ptrval____)   (  2560 KB)
+[    0.000000]       .init : 0x(____ptrval____) - 0x(____ptrval____)   (   960 KB)
+[    0.000000]       .data : 0x(____ptrval____) - 0x(____ptrval____)   (  1189 KB)
+[    0.000000]        .bss : 0x(____ptrval____) - 0x(____ptrval____)   (   742 KB)
+[    0.000000]     fixed   : 0xffff7dfffe7fb000 - 0xffff7dfffec00000   (  4116 KB)
+[    0.000000]     PCI I/O : 0xffff7dfffee00000 - 0xffff7dffffe00000   (    16 MB)
+[    0.000000]     vmemmap : 0xffff7e0000000000 - 0xffff800000000000   (  2048 GB maximum)
+[    0.000000]               0xffff7e0000040000 - 0xffff7e0001e6c000   (    30 MB actual)
+[    0.000000]     memory  : 0xffff800001000000 - 0xffff800079b00000   (  1931 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] ftrace: allocating 32768 entries in 129 pages
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] NR_IRQS:64 nr_irqs:64 0
+[    0.000000] GIC: Using split EOI/Deactivate mode
+[    0.000000] arch_timer: cp15 timer(s) running at 400.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x5c4093a7d1, max_idle_ns: 440795210635 ns
+[    0.000004] sched_clock: 56 bits at 400MHz, resolution 2ns, wraps every 4398046511103ns
+[    0.008165] Console: colour dummy device 80x25
+[    0.012616] Calibrating delay loop (skipped), value calculated using timer frequency.. 800.00 BogoMIPS (lpj=1600000)
+[    0.023099] pid_max: default: 32768 minimum: 301
+[    0.027768] Security Framework initialized
+[    0.031985] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.038663] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.061844] ASID allocator initialised with 32768 entries
+[    0.076781] EFI services will not be available.
+[    0.089323] smp: Bringing up secondary CPUs ...
+[    0.121975] Detected VIPT I-cache on CPU1
+[    0.122031] CPU1: Booted secondary processor [410fd034]
+[    0.150003] Detected VIPT I-cache on CPU2
+[    0.150025] CPU2: Booted secondary processor [410fd034]
+[    0.178067] Detected VIPT I-cache on CPU3
+[    0.178088] CPU3: Booted secondary processor [410fd034]
+[    0.178140] smp: Brought up 1 node, 4 CPUs
+[    0.209794] SMP: Total of 4 processors activated.
+[    0.214484] CPU features: detected feature: 32-bit EL0 Support
+[    0.220297] CPU features: detected feature: Kernel page table isolation (KPTI)
+[    0.229824] CPU: All CPU(s) started at EL2
+[    0.233923] alternatives: patching kernel code
+[    0.239595] devtmpfs: initialized
+[    0.246126] DMI not present or invalid.
+[    0.250090] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.259803] futex hash table entries: 1024 (order: 5, 131072 bytes)
+[    0.266989] xor: measuring software checksum speed
+[    0.311819]    8regs     :  2292.000 MB/sec
+[    0.356039]    8regs_prefetch:  2041.000 MB/sec
+[    0.400605]    32regs    :  2811.000 MB/sec
+[    0.444824]    32regs_prefetch:  2370.000 MB/sec
+[    0.449426] xor: using function: 32regs (2811.000 MB/sec)
+[    0.455514] NET: Registered protocol family 16
+[    0.460731] cpuidle: using governor ladder
+[    0.464835] cpuidle: using governor menu
+[    0.468877] vdso: 2 pages (1 code @ (____ptrval____), 1 data @ (____ptrval____))
+[    0.476256] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.484100] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.490221] dw_wdt: Synopsys DesignWare Watchdog Driver is registered at arch_initcall level
+[    0.502497] dw_wdt: +++ skip updating timeout to wdd.
+[    0.513811] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    0.588290] raid6: int64x1  gen()   407 MB/s
+[    0.660682] raid6: int64x1  xor()   451 MB/s
+[    0.733120] raid6: int64x2  gen()   705 MB/s
+[    0.805499] raid6: int64x2  xor()   607 MB/s
+[    0.877879] raid6: int64x4  gen()  1065 MB/s
+[    0.950286] raid6: int64x4  xor()   747 MB/s
+[    1.022341] raid6: int64x8  gen()   989 MB/s
+[    1.094411] raid6: int64x8  xor()   750 MB/s
+[    1.166572] raid6: neonx1   gen()   737 MB/s
+[    1.238600] raid6: neonx1   xor()   766 MB/s
+[    1.310659] raid6: neonx2   gen()  1192 MB/s
+[    1.382754] raid6: neonx2   xor()  1042 MB/s
+[    1.454831] raid6: neonx4   gen()  1552 MB/s
+[    1.526926] raid6: neonx4   xor()  1195 MB/s
+[    1.598988] raid6: neonx8   gen()  1573 MB/s
+[    1.671073] raid6: neonx8   xor()  1205 MB/s
+[    1.675329] raid6: using algorithm neonx8 gen() 1573 MB/s
+[    1.680707] raid6: .... xor() 1205 MB/s, rmw enabled
+[    1.685653] raid6: using intx1 recovery algorithm
+[    1.690960] vgaarb: loaded
+[    1.694144] Intel Service Layer Driver Initialized
+[    1.699223] SCSI subsystem initialized
+[    1.703169] usbcore: registered new interface driver usbfs
+[    1.708671] usbcore: registered new interface driver hub
+[    1.714016] usbcore: registered new device driver usb
+[    1.719456] pps_core: LinuxPPS API ver. 1 registered
+[    1.724408] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.733515] PTP clock support registered
+[    1.737562] EDAC MC: Ver: 3.0.0
+[    1.740914] dmi: Firmware registration failed.
+[    1.745413] FPGA manager framework
+[    1.748914] fpga-region soc:base_fpga_region: FPGA Region probed
+[    1.756010] clocksource: Switched to clocksource arch_sys_counter
+[    1.845844] NET: Registered protocol family 2
+[    1.850852] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+[    1.858165] TCP bind hash table entries: 16384 (order: 6, 262144 bytes)
+[    1.865462] TCP: Hash tables configured (established 16384 bind 16384)
+[    1.872122] UDP hash table entries: 1024 (order: 3, 32768 bytes)
+[    1.878148] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+[    1.884798] NET: Registered protocol family 1
+[    1.889740] RPC: Registered named UNIX socket transport module.
+[    1.895646] RPC: Registered udp transport module.
+[    1.900336] RPC: Registered tcp transport module.
+[    1.905023] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.911664] Trying to unpack rootfs image as initramfs...
+
+2021-01-15 00:21:30,139:INFO:
+Access and use of this device  console  is for authorized users only. If you
+are not authorized by  Nokia Corporation  you have to close this  connection
+immediately. Any unauthorized use or access attempts may be investigated and
+prosecuted  in  accordance  with applicable local laws.  Continuing with the
+log-in process  implies that you  understand and acknowledge the above.  For
+questions contact Nokia Corporation.
+
+--=---+---=--
+       \___         NOKIA RFSW LINUX
+ ---=---+-I-=---         TD-CPRI
+        |\
+  ---=----+----=---
+        |
+        ^
+Wind River Linux LTS 10.17.41.17
+TRM60.11.R09Q jenkins-PROD_mMIMO_TRM6_FB2011_Q_release-239 2021-01-02_09-43-47 rev df5154f2
+stratix10-aeqb login: 
+2021-01-15 00:22:08,159:INFO:[   65.315465] fpga_manager fpga0: writing aeqb-td-bitstream.core.rbf to Stratix10 SOC FPGA Manager
+[   65.467821] Stratix10 SoC FPGA manager soc:fpga-mgr@0: Requesting full reconfiguration.
+[   66.794337] ccr_driver f9040000.ccr: CCR driver: Device 'ccr0' probed. ret:0!
+[   66.810371] altera-i2c f9001800.i2c: Altera SoftIP I2C Probe Complete
+[   66.818830] altera-i2c f90018c0.i2c: Altera SoftIP I2C Probe Complete
+[   66.838858] Deasserting reset
+[   66.840659] cco_driver 80300000.SM0_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb0' probed and ready!
+[   66.852008] socfpga-dwmac ff802000.ethernet: PTP uses main clock
+[   66.852414] stmmac - user ID: 0x11, Synopsys ID: 0x37
+[   66.852424] socfpga-dwmac ff802000.ethernet: Ring mode enabled
+[   66.852436] socfpga-dwmac ff802000.ethernet: DMA HW capability register supported
+[   66.852441] socfpga-dwmac ff802000.ethernet: Enhanced/Alternate descriptors
+[   66.852446] socfpga-dwmac ff802000.ethernet: Enabled extended descriptors
+[   66.852451] socfpga-dwmac ff802000.ethernet: RX Checksum Offload Engine supported
+[   66.852457] socfpga-dwmac ff802000.ethernet: COE Type 2
+[   66.852462] socfpga-dwmac ff802000.ethernet: TX Checksum insertion supported
+[   66.852474] socfpga-dwmac ff802000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[   66.876941] socfpga-dwmac ff804000.ethernet: PTP uses main clock
+[   66.877308] stmmac - user ID: 0x11, Synopsys ID: 0x37
+[   66.877326] socfpga-dwmac ff804000.ethernet: Ring mode enabled
+[   66.877335] socfpga-dwmac ff804000.ethernet: DMA HW capability register supported
+[   66.877344] socfpga-dwmac ff804000.ethernet: Enhanced/Alternate descriptors
+[   66.877348] socfpga-dwmac ff804000.ethernet: Enabled extended descriptors
+[   66.877353] socfpga-dwmac ff804000.ethernet: RX Checksum Offload Engine supported
+[   66.877357] socfpga-dwmac ff804000.ethernet: COE Type 2
+[   66.877363] socfpga-dwmac ff804000.ethernet: TX Checksum insertion supported
+[   66.877375] socfpga-dwmac ff804000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[   66.890276] f9030000.serial2: ttyS2 at MMIO 0xf9030000 (irq = 119, base_baud = 3276800) is a Altera 16550 FIFO128
+[   66.892631] f9030200.serial3: ttyS3 at MMIO 0xf9030200 (irq = 119, base_baud = 3276800) is a Altera 16550 FIFO128
+[   66.893504] f9030400.serial4: ttyS4 at MMIO 0xf9030400 (irq = 119, base_baud = 3276800) is a Altera 16550 FIFO128
+[   66.896577] f9030600.serial5: ttyS5 at MMIO 0xf9030600 (irq = 119, base_baud = 3276800) is a Altera 16550 FIFO128
+[   66.901554] f9030800.serial6: ttyS6 at MMIO 0xf9030800 (irq = 119, base_baud = 3276800) is a Altera 16550 FIFO128
+[   66.902563] f9030a00.serial7: ttyS7 at MMIO 0xf9030a00 (irq = 119, base_baud = 3276800) is a Altera 16550 FIFO128
+[   66.903102] f9030c00.serial8: ttyS8 at MMIO 0xf9030c00 (irq = 119, base_baud = 3276800) is a Altera 16550 FIFO128
+[   66.903613] f9030e00.serial9: ttyS9 at MMIO 0xf9030e00 (irq = 119, base_baud = 3276800) is a Altera 16550 FIFO128
+[   67.090696] Deasserting reset
+[   67.091429] cco_driver 80310000.SM1_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb1' probed and ready!
+[   67.111187] Deasserting reset
+[   67.111874] cco_driver 80320000.RF0_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb2' probed and ready!
+[   67.129322] Deasserting reset
+[   67.133311] cco_driver 80330000.RF1_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb3' probed and ready!
+[   67.149378] Deasserting reset
+[   67.149932] cco_driver 80340000.RF2_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb4' probed and ready!
+[   67.165253] Deasserting reset
+[   67.165660] cco_driver 80350000.RF2B_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb5' probed and ready!
+[   67.181712] Deasserting reset
+[   67.182384] cco_driver 80380000.RF3_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb6' probed and ready!
+[   67.198889] Deasserting reset
+[   67.199820] cco_driver 80390000.RF3B_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb7' probed and ready!
+[   67.215274] Deasserting reset
+[   67.215644] cco_driver 80400000.RF4_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb8' probed and ready!
+[   67.231821] Deasserting reset
+[   67.232485] cco_driver 80410000.RF4B_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb9' probed and ready!
+[   67.247792] Deasserting reset
+[   67.248470] cco_driver 80420000.RF5_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb10' probed and ready!
+[   67.263396] Deasserting reset
+[   67.263742] cco_driver 80430000.RF5B_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb11' probed and ready!
+[   67.278823] Deasserting reset
+[   67.279160] cco_driver 80440000.RF6_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb12' probed and ready!
+[   67.294333] Deasserting reset
+[   67.294675] cco_driver 80450000.RF6B_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb13' probed and ready!
+[   67.309708] Deasserting reset
+[   67.310049] cco_driver 80460000.RF7_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb14' probed and ready!
+[   67.312681] Not support switch PN:0xcd32!
+[   67.312919] Marvell 88E1510 stmmac-0:01: attached PHY driver [Marvell 88E1510] (mii_bus:phy_addr=stmmac-0:01, irq=-1)
+[   67.319148] socfpga-dwmac ff800000.ethernet eth0: IEEE 1588-2008 Advanced Timestamp supported
+[   67.324043] socfpga-dwmac ff800000.ethernet eth0: registered PTP clock
+[   67.324750] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   67.324927] IPv6: ADDRCONF(NETDEV_UP): eth0.257: link is not ready
+[   67.325090] IPv6: ADDRCONF(NETDEV_UP): eth0.258: link is not ready
+[   67.381681] Deasserting reset
+[   67.382698] cco_driver 80470000.RF7B_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb15' probed and ready!
+[   67.397999] Generic PHY fixed-0:00: attached PHY driver [Generic PHY] (mii_bus:phy_addr=fixed-0:00, irq=-1)
+[   67.410001] Deasserting reset
+[   67.410526] cco_driver 80480000.RF8_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb16' probed and ready!
+[   67.411595] socfpga-dwmac ff802000.ethernet eth1: IEEE 1588-2008 Advanced Timestamp supported
+[   67.413600] socfpga-dwmac ff802000.ethernet eth1: registered PTP clock
+[   67.414313] IPv6: ADDRCONF(NETDEV_UP): eth1: link is not ready
+[   67.437228] Generic PHY fixed-0:01: attached PHY driver [Generic PHY] (mii_bus:phy_addr=fixed-0:01, irq=-1)
+[   67.441556] socfpga-dwmac ff804000.ethernet eth2: IEEE 1588-2008 Advanced Timestamp supported
+[   67.446461] socfpga-dwmac ff804000.ethernet eth2: registered PTP clock
+[   67.446772] IPv6: ADDRCONF(NETDEV_UP): eth2: link is not ready
+[   67.478508] Deasserting reset
+[   67.479223] cco_driver 80490000.RF8B_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb17' probed and ready!
+[   67.479917] br0: port 1(eth1) entered blocking state
+[   67.479941] br0: port 1(eth1) entered disabled state
+[   67.480491] device eth1 entered promiscuous mode
+[   67.493138] br0: port 2(eth2) entered blocking state
+[   67.493156] br0: port 2(eth2) entered disabled state
+[   67.493351] device eth2 entered promiscuous mode
+[   67.498313] br0: port 2(eth2) entered blocking state
+[   67.498322] br0: port 2(eth2) entered forwarding state
+[   67.498413] br0: port 1(eth1) entered blocking state
+[   67.498421] br0: port 1(eth1) entered forwarding state
+[   68.244110] br0: port 1(eth1) entered disabled state
+[   68.250227] br0: port 2(eth2) entered disabled state
+[   68.340821] socfpga-dwmac ff800000.ethernet eth0: Link is Up - 1Gbps/Full - flow control off
+[   68.349350] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   68.356274] IPv6: ADDRCONF(NETDEV_CHANGE): eth0.257: link becomes ready
+[   68.363825] IPv6: ADDRCONF(NETDEV_CHANGE): eth0.258: link becomes ready
+[   68.436070] socfpga-dwmac ff802000.ethernet eth1: Link is Up - 1Gbps/Full - flow control off
+[   68.444547] IPv6: ADDRCONF(NETDEV_CHANGE): eth1: link becomes ready
+[   68.451076] br0: port 1(eth1) entered blocking state
+[   68.456048] br0: port 1(eth1) entered forwarding state
+[   68.468108] socfpga-dwmac ff804000.ethernet eth2: Link is Up - 1Gbps/Full - flow control off
+[   68.468237] IPv6: ADDRCONF(NETDEV_CHANGE): eth2: link becomes ready
+[   68.468406] br0: port 2(eth2) entered blocking state
+[   68.468415] br0: port 2(eth2) entered forwarding state
+
+2021-01-15 00:22:12,164:INFO:[   72.555054] ttyS1 - failed to request DMA
+
+2021-01-15 00:26:31,301:INFO:
+U-Boot SPL 2017.09+gitAUTOINC+c0cfd0b4df-nokia-r153 (Dec 31 2020 - 06:53:42)
+MPU         1200000 kHz
+L3 main     400000 kHz
+Main VCO    1200000 kHz
+Per VCO     2000000 kHz
+EOSC1       125000 kHz
+HPS MMC     100 kHz
+UART        100000 kHz
+
+2021-01-15 00:26:35,303:INFO:DDR: emif_clear() failed
+DDR: 2048 MiB
+QSPI: Reference clock at 400000000 Hz
+Stratix10 boot info:
+	Last power-on reset triggered by SDM: true
+	Last reset type: SDM power-on reset
+	Debug reset triggered: false
+	CS DAP reset triggered: false
+Trying to boot from SPI
+RSU current image:  0x03400000
+RSU state:          0x00000000
+RSU error location: 0x00000000
+RSU error details:  0x00000000
+RSU SSBL partition SSBL.PROD000001 at address 0x02200000.
+
+
+U-Boot 2017.09+gitAUTOINC+c0cfd0b4df-nokia-r153 (Dec 31 2020 - 06:53:42 +0000)socfpga_stratix10_aeqb
+
+CPU:   Intel FPGA SoCFPGA Platform
+FPGA:  Intel FPGA Stratix 10
+Model: Nokia AEQB
+       Watchdog enabled
+MTest: Memory test flags not setted
+DRAM:  2 GiB
+De-Assert EMAC0, EMAC1, EMAC2...OK
+Stratix10 boot info:
+	Last power-on reset triggered by SDM: true
+	Last reset type: SDM power-on reset
+	Debug reset triggered: false
+	CS DAP reset triggered: false
+	Clear reset status:0x0
+MMC:   
+Using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Model: Nokia AEQB
+Net:   
+Warning: ethernet@ff800000 (eth0) using random MAC address - fe:25:6a:3c:28:c8
+eth0: ethernet@ff800000
+PowerOn or HW or L4WD0 reset, Reset the made
+Taking peripheral out of reset ... OK
+Configuring Marvell 88E1512 PHY ... OK
+Configuring Ethernet Switch ... OK
+SF: Detected mt25qu02g with page size 256 Bytes, erase size 64 KiB, total 256 MiB
+Slot: selecting slot1
+SPTs are GOOD!!!
+CPBs are GOOD!!!
+Autoboot in 3 seconds
+
+2021-01-15 00:26:38,305:INFO:gpio: pin 0 (gpio 0) value is 1
+SF: Detected mt25qu02g with page size 256 Bytes, erase size 64 KiB, total 256 MiB
+ubi0: attaching mtd2
+ubi0: scanning is finished
+ubi0: attached mtd2 (name "mtd=0", size 256 MiB)
+ubi0: PEB size: 65536 bytes (64 KiB), LEB size: 65408 bytes
+ubi0: min./max. I/O unit sizes: 1/256, sub-page size 1
+ubi0: VID header offset: 64 (aligned 64), data offset: 128
+ubi0: good PEBs: 4096, bad PEBs: 0, corrupted PEBs: 0
+ubi0: user volume: 2, internal volumes: 1, max. volumes count: 128
+ubi0: max/mean erase counter: 7/5, WL threshold: 4096, image sequence number: 2575912687
+ubi0: available PEBs: 504, total reserved PEBs: 3592, PEBs reserved for bad PEB handling: 0
+Read 0 bytes from volume slot1_sw to 30000000
+No size specified -> Using max size (66799200)
+
+2021-01-15 00:27:04,318:INFO:## Copying 'fdt' subimage from FIT image at 30000000 ...
+crc32+ sha1+    Loading part 253 ... OK
+FDT fixup successful
+## Loading kernel from FIT Image at 30000000 ...
+   Using 'socfpga@0' configuration
+   Trying 'kernel@0' kernel subimage
+     Description:  Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x300000e4
+     Data Size:    14782976 Bytes = 14.1 MiB
+     Architecture: AArch64
+     OS:           Linux
+     Load Address: 0x01080000
+     Entry Point:  0x01080000
+     Hash algo:    crc32
+     Hash value:   19822168
+     Hash algo:    sha1
+     Hash value:   6efb939f2e06e42b4d861a29c44972ca77b7d106
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+## Loading ramdisk from FIT Image at 30000000 ...
+   Using 'socfpga@0' configuration
+   Trying 'rootfs@0' ramdisk subimage
+     Description:  Root Filesystem CPIO archive Gzipped
+     Type:         RAMDisk Image
+     Compression:  uncompressed
+     Data Start:   0x30e1daf8
+     Data Size:    51996152 Bytes = 49.6 MiB
+     Architecture: AArch64
+     OS:           Linux
+     Load Address: 0x20000000
+     Entry Point:  unavailable
+     Hash algo:    crc32
+     Hash value:   070fe5cf
+     Hash algo:    sha1
+     Hash value:   1bd2e3af4f0803daf92fcd7e4aed62be6e5945fd
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+   Loading ramdisk from 0x30e1daf8 to 0x20000000
+## Flattened Device Tree blob at 08000000
+   Booting using the fdt blob at 0x8000000
+   Loading Kernel Image ... OK
+   Loading Ramdisk to 15a69000, end 18bff5f8 ... OK
+   reserving fdt memory region: addr=8000000 size=9000
+   Loading Device Tree to 0000000015a5d000, end 0000000015a68fff ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.12.29-nokia-r91 (oe-user@oe-host) (gcc version 7.3.0 (GCC) ) #1 SMP PREEMPT Wed Dec 23 10:29:41 UTC 2020
+[    0.000000] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000] Machine model: SoCFPGA Stratix 10 AEQB
+[    0.000000] earlycon: uart0 at MMIO32 0x00000000ffc02000 (options '115200n8')
+[    0.000000] bootconsole [uart0] enabled
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] Reserved memory: created DMA memory pool at 0x0000000000000000, size 16 MiB
+[    0.000000] OF: reserved mem: initialized node svcbuffer@0, compatible id shared-dma-pool
+[    0.000000] cma: Reserved 16 MiB at 0x0000000078800000
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv65535.65535 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.0
+[    0.000000] percpu: Embedded 22 pages/cpu @(____ptrval____) s52888 r8192 d29032 u90112
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 486612
+[    0.000000] Kernel command line: earlyprintk earlycon syscon_enable=1 console=ttyS0,115200n8 rdinit=/sbin/init rw initrd=0x20000000,0x8000000 runningVolName=slot1_sw
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.000000] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.000000] Memory: 1727456K/1977344K available (9724K kernel code, 1188K rwdata, 2528K rodata, 960K init, 741K bss, 233504K reserved, 16384K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     modules : 0xffff000000000000 - 0xffff000008000000   (   128 MB)
+[    0.000000]     vmalloc : 0xffff000008000000 - 0xffff7dffbfff0000   (129022 GB)
+[    0.000000]       .text : 0x(____ptrval____) - 0x(____ptrval____)   (  9728 KB)
+[    0.000000]     .rodata : 0x(____ptrval____) - 0x(____ptrval____)   (  2560 KB)
+[    0.000000]       .init : 0x(____ptrval____) - 0x(____ptrval____)   (   960 KB)
+[    0.000000]       .data : 0x(____ptrval____) - 0x(____ptrval____)   (  1189 KB)
+[    0.000000]        .bss : 0x(____ptrval____) - 0x(____ptrval____)   (   742 KB)
+[    0.000000]     fixed   : 0xffff7dfffe7fb000 - 0xffff7dfffec00000   (  4116 KB)
+[    0.000000]     PCI I/O : 0xffff7dfffee00000 - 0xffff7dffffe00000   (    16 MB)
+[    0.000000]     vmemmap : 0xffff7e0000000000 - 0xffff800000000000   (  2048 GB maximum)
+[    0.000000]               0xffff7e0000040000 - 0xffff7e0001e6c000   (    30 MB actual)
+[    0.000000]     memory  : 0xffff800001000000 - 0xffff800079b00000   (  1931 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] ftrace: allocating 32768 entries in 129 pages
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] NR_IRQS:64 nr_irqs:64 0
+[    0.000000] GIC: Using split EOI/Deactivate mode
+[    0.000000] arch_timer: cp15 timer(s) running at 400.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x5c4093a7d1, max_idle_ns: 440795210635 ns
+[    0.000003] sched_clock: 56 bits at 400MHz, resolution 2ns, wraps every 4398046511103ns
+[    0.008163] Console: colour dummy device 80x25
+[    0.012617] Calibrating delay loop (skipped), value calculated using timer frequency.. 800.00 BogoMIPS (lpj=1600000)
+[    0.023100] pid_max: default: 32768 minimum: 301
+[    0.027770] Security Framework initialized
+[    0.031985] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.038662] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.061844] ASID allocator initialised with 32768 entries
+[    0.076759] EFI services will not be available.
+[    0.089301] smp: Bringing up secondary CPUs ...
+[    0.121951] Detected VIPT I-cache on CPU1
+[    0.122008] CPU1: Booted secondary processor [410fd034]
+[    0.149981] Detected VIPT I-cache on CPU2
+[    0.150002] CPU2: Booted secondary processor [410fd034]
+[    0.178044] Detected VIPT I-cache on CPU3
+[    0.178065] CPU3: Booted secondary processor [410fd034]
+[    0.178117] smp: Brought up 1 node, 4 CPUs
+[    0.209770] SMP: Total of 4 processors activated.
+[    0.214460] CPU features: detected feature: 32-bit EL0 Support
+[    0.220273] CPU features: detected feature: Kernel page table isolation (KPTI)
+[    0.229801] CPU: All CPU(s) started at EL2
+[    0.233899] alternatives: patching kernel code
+[    0.239551] devtmpfs: initialized
+[    0.246073] DMI not present or invalid.
+[    0.250041] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.259755] futex hash table entries: 1024 (order: 5, 131072 bytes)
+[    0.266916] xor: measuring software checksum speed
+[    0.311746]    8regs     :  2292.000 MB/sec
+[    0.355967]    8regs_prefetch:  2041.000 MB/sec
+[    0.400532]    32regs    :  2811.000 MB/sec
+[    0.444751]    32regs_prefetch:  2370.000 MB/sec
+[    0.449353] xor: using function: 32regs (2811.000 MB/sec)
+[    0.455445] NET: Registered protocol family 16
+[    0.460673] cpuidle: using governor ladder
+[    0.464777] cpuidle: using governor menu
+[    0.468821] vdso: 2 pages (1 code @ (____ptrval____), 1 data @ (____ptrval____))
+[    0.476198] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.484044] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.490165] dw_wdt: Synopsys DesignWare Watchdog Driver is registered at arch_initcall level
+[    0.502451] dw_wdt: +++ skip updating timeout to wdd.
+[    0.513768] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    0.588312] raid6: int64x1  gen()   407 MB/s
+[    0.660702] raid6: int64x1  xor()   450 MB/s
+[    0.733143] raid6: int64x2  gen()   705 MB/s
+[    0.805552] raid6: int64x2  xor()   607 MB/s
+[    0.877943] raid6: int64x4  gen()  1065 MB/s
+[    0.950345] raid6: int64x4  xor()   747 MB/s
+[    1.022394] raid6: int64x8  gen()   989 MB/s
+[    1.094491] raid6: int64x8  xor()   750 MB/s
+[    1.166594] raid6: neonx1   gen()   736 MB/s
+[    1.238645] raid6: neonx1   xor()   765 MB/s
+[    1.310769] raid6: neonx2   gen()  1193 MB/s
+[    1.382815] raid6: neonx2   xor()  1042 MB/s
+[    1.454906] raid6: neonx4   gen()  1552 MB/s
+[    1.526991] raid6: neonx4   xor()  1195 MB/s
+[    1.599066] raid6: neonx8   gen()  1566 MB/s
+[    1.671147] raid6: neonx8   xor()  1205 MB/s
+[    1.675403] raid6: using algorithm neonx8 gen() 1566 MB/s
+[    1.680781] raid6: .... xor() 1205 MB/s, rmw enabled
+[    1.685727] raid6: using intx1 recovery algorithm
+[    1.691032] vgaarb: loaded
+[    1.694223] Intel Service Layer Driver Initialized
+[    1.699309] SCSI subsystem initialized
+[    1.703247] usbcore: registered new interface driver usbfs
+[    1.708750] usbcore: registered new interface driver hub
+[    1.714095] usbcore: registered new device driver usb
+[    1.719543] pps_core: LinuxPPS API ver. 1 registered
+[    1.724495] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.733602] PTP clock support registered
+[    1.737647] EDAC MC: Ver: 3.0.0
+[    1.740999] dmi: Firmware registration failed.
+[    1.745496] FPGA manager framework
+[    1.748999] fpga-region soc:base_fpga_region: FPGA Region probed
+[    1.756091] clocksource: Switched to clocksource arch_sys_counter
+[    1.845986] NET: Registered protocol family 2
+[    1.850986] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+[    1.858303] TCP bind hash table entries: 16384 (order: 6, 262144 bytes)
+[    1.865591] TCP: Hash tables configured (established 16384 bind 16384)
+[    1.872237] UDP hash table entries: 1024 (order: 3, 32768 bytes)
+[    1.878267] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+[    1.884916] NET: Registered protocol family 1
+[    1.889861] RPC: Registered named UNIX socket transport module.
+[    1.895768] RPC: Registered udp transport module.
+[    1.900457] RPC: Registered tcp transport module.
+[    1.905145] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.911779] Trying to unpack rootfs image as initramfs...
+
+2021-01-15 00:27:32,367:INFO:
+Access and use of this device  console  is for authorized users only. If you
+are not authorized by  Nokia Corporation  you have to close this  connection
+immediately. Any unauthorized use or access attempts may be investigated and
+prosecuted  in  accordance  with applicable local laws.  Continuing with the
+log-in process  implies that you  understand and acknowledge the above.  For
+questions contact Nokia Corporation.
+
+--=---+---=--
+       \___         NOKIA RFSW LINUX
+ ---=---+-I-=---         TD-CPRI
+        |\
+  ---=----+----=---
+        |
+        ^
+Wind River Linux LTS 10.17.41.17
+TRM60.11.R09Q jenkins-PROD_mMIMO_TRM6_FB2011_Q_release-239 2021-01-02_09-43-47 rev df5154f2
+stratix10-aeqb login: 
+2021-01-15 00:27:58,380:INFO:[   51.963000] fpga_manager fpga0: writing aeqb-td-bitstream.core.rbf to Stratix10 SOC FPGA Manager
+[   52.237415] Stratix10 SoC FPGA manager soc:fpga-mgr@0: Requesting full reconfiguration.
+[   53.655698] ccr_driver f9040000.ccr: CCR driver: Device 'ccr0' probed. ret:0!
+[   53.685048] altera-i2c f9001800.i2c: Altera SoftIP I2C Probe Complete
+[   53.699471] altera-i2c f90018c0.i2c: Altera SoftIP I2C Probe Complete
+[   53.728497] Deasserting reset
+[   53.729800] cco_driver 80300000.SM0_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb0' probed and ready!
+[   53.750114] Deasserting reset
+[   53.753702] cco_driver 80310000.SM1_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb1' probed and ready!
+[   53.780569] Deasserting reset
+[   53.782227] cco_driver 80320000.RF0_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb2' probed and ready!
+[   53.791720] socfpga-dwmac ff802000.ethernet: PTP uses main clock
+[   53.792301] stmmac - user ID: 0x11, Synopsys ID: 0x37
+[   53.792311] socfpga-dwmac ff802000.ethernet: Ring mode enabled
+[   53.792319] socfpga-dwmac ff802000.ethernet: DMA HW capability register supported
+[   53.792325] socfpga-dwmac ff802000.ethernet: Enhanced/Alternate descriptors
+[   53.792330] socfpga-dwmac ff802000.ethernet: Enabled extended descriptors
+[   53.792335] socfpga-dwmac ff802000.ethernet: RX Checksum Offload Engine supported
+[   53.792339] socfpga-dwmac ff802000.ethernet: COE Type 2
+[   53.792344] socfpga-dwmac ff802000.ethernet: TX Checksum insertion supported
+[   53.792355] socfpga-dwmac ff802000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[   53.809682] socfpga-dwmac ff804000.ethernet: PTP uses main clock
+[   53.810009] stmmac - user ID: 0x11, Synopsys ID: 0x37
+[   53.810020] socfpga-dwmac ff804000.ethernet: Ring mode enabled
+[   53.810028] socfpga-dwmac ff804000.ethernet: DMA HW capability register supported
+[   53.810034] socfpga-dwmac ff804000.ethernet: Enhanced/Alternate descriptors
+[   53.810038] socfpga-dwmac ff804000.ethernet: Enabled extended descriptors
+[   53.810044] socfpga-dwmac ff804000.ethernet: RX Checksum Offload Engine supported
+[   53.810049] socfpga-dwmac ff804000.ethernet: COE Type 2
+[   53.810053] socfpga-dwmac ff804000.ethernet: TX Checksum insertion supported
+[   53.810063] socfpga-dwmac ff804000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[   53.858252] f9030000.serial2: ttyS2 at MMIO 0xf9030000 (irq = 119, base_baud = 3276800) is a Altera 16550 FIFO128
+[   53.858874] f9030200.serial3: ttyS3 at MMIO 0xf9030200 (irq = 119, base_baud = 3276800) is a Altera 16550 FIFO128
+[   53.859481] f9030400.serial4: ttyS4 at MMIO 0xf9030400 (irq = 119, base_baud = 3276800) is a Altera 16550 FIFO128
+[   53.860058] f9030600.serial5: ttyS5 at MMIO 0xf9030600 (irq = 119, base_baud = 3276800) is a Altera 16550 FIFO128
+[   53.860909] f9030800.serial6: ttyS6 at MMIO 0xf9030800 (irq = 119, base_baud = 3276800) is a Altera 16550 FIFO128
+[   53.861473] f9030a00.serial7: ttyS7 at MMIO 0xf9030a00 (irq = 119, base_baud = 3276800) is a Altera 16550 FIFO128
+[   53.862038] f9030c00.serial8: ttyS8 at MMIO 0xf9030c00 (irq = 119, base_baud = 3276800) is a Altera 16550 FIFO128
+[   53.862790] f9030e00.serial9: ttyS9 at MMIO 0xf9030e00 (irq = 119, base_baud = 3276800) is a Altera 16550 FIFO128
+[   54.049686] Deasserting reset
+[   54.051636] cco_driver 80330000.RF1_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb3' probed and ready!
+[   54.074013] Deasserting reset
+[   54.076798] cco_driver 80340000.RF2_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb4' probed and ready!
+[   54.100501] Deasserting reset
+[   54.103085] cco_driver 80350000.RF2B_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb5' probed and ready!
+[   54.128609] Deasserting reset
+[   54.131131] cco_driver 80380000.RF3_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb6' probed and ready!
+[   54.155697] Deasserting reset
+[   54.158032] cco_driver 80390000.RF3B_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb7' probed and ready!
+[   54.182994] Deasserting reset
+[   54.185409] cco_driver 80400000.RF4_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb8' probed and ready!
+[   54.208643] Deasserting reset
+[   54.210783] cco_driver 80410000.RF4B_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb9' probed and ready!
+[   54.234037] Deasserting reset
+[   54.235989] cco_driver 80420000.RF5_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb10' probed and ready!
+[   54.259467] Deasserting reset
+[   54.262190] cco_driver 80430000.RF5B_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb11' probed and ready!
+[   54.284991] Deasserting reset
+[   54.287696] cco_driver 80440000.RF6_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb12' probed and ready!
+[   54.311959] Deasserting reset
+[   54.313773] cco_driver 80450000.RF6B_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb13' probed and ready!
+[   54.335647] Deasserting reset
+[   54.336848] cco_driver 80460000.RF7_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb14' probed and ready!
+[   54.355340] Deasserting reset
+[   54.357582] cco_driver 80470000.RF7B_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb15' probed and ready!
+[   54.391833] Deasserting reset
+[   54.393592] cco_driver 80480000.RF8_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb16' probed and ready!
+[   54.418919] Deasserting reset
+[   54.420060] cco_driver 80490000.RF8B_cpricore001_CPRICORE001: CPRICORE driver: Device 'conn_cgb17' probed and ready!
+[   54.449594] Not support switch PN:0xcd32!
+[   54.455139] Marvell 88E1510 stmmac-0:01: attached PHY driver [Marvell 88E1510] (mii_bus:phy_addr=stmmac-0:01, irq=-1)
+[   54.488382] socfpga-dwmac ff800000.ethernet eth0: IEEE 1588-2008 Advanced Timestamp supported
+[   54.502517] socfpga-dwmac ff800000.ethernet eth0: registered PTP clock
+[   54.516022] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   54.531463] IPv6: ADDRCONF(NETDEV_UP): eth0.257: link is not ready
+[   54.541780] IPv6: ADDRCONF(NETDEV_UP): eth0.258: link is not ready
+[   54.793620] Generic PHY fixed-0:00: attached PHY driver [Generic PHY] (mii_bus:phy_addr=fixed-0:00, irq=-1)
+[   54.811108] socfpga-dwmac ff802000.ethernet eth1: IEEE 1588-2008 Advanced Timestamp supported
+[   54.821130] socfpga-dwmac ff802000.ethernet eth1: registered PTP clock
+[   54.832374] IPv6: ADDRCONF(NETDEV_UP): eth1: link is not ready
+[   54.882073] Generic PHY fixed-0:01: attached PHY driver [Generic PHY] (mii_bus:phy_addr=fixed-0:01, irq=-1)
+[   54.898693] socfpga-dwmac ff804000.ethernet eth2: IEEE 1588-2008 Advanced Timestamp supported
+[   54.908558] socfpga-dwmac ff804000.ethernet eth2: registered PTP clock
+[   54.916925] IPv6: ADDRCONF(NETDEV_UP): eth2: link is not ready
+[   54.979640] br0: port 1(eth1) entered blocking state
+[   54.985761] br0: port 1(eth1) entered disabled state
+[   54.991431] device eth1 entered promiscuous mode
+[   55.019343] br0: port 2(eth2) entered blocking state
+[   55.024476] br0: port 2(eth2) entered disabled state
+[   55.030350] device eth2 entered promiscuous mode
+[   55.044447] br0: port 2(eth2) entered blocking state
+[   55.049450] br0: port 2(eth2) entered forwarding state
+[   55.054986] br0: port 1(eth1) entered blocking state
+[   55.060127] br0: port 1(eth1) entered forwarding state
+[   55.380566] br0: port 1(eth1) entered disabled state
+[   55.387460] br0: port 2(eth2) entered disabled state
+[   55.572967] socfpga-dwmac ff800000.ethernet eth0: Link is Up - 1Gbps/Full - flow control off
+[   55.581678] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   55.593180] IPv6: ADDRCONF(NETDEV_CHANGE): eth0.257: link becomes ready
+[   55.601914] IPv6: ADDRCONF(NETDEV_CHANGE): eth0.258: link becomes ready
+[   55.860305] socfpga-dwmac ff802000.ethernet eth1: Link is Up - 1Gbps/Full - flow control off
+[   55.869180] IPv6: ADDRCONF(NETDEV_CHANGE): eth1: link becomes ready
+[   55.876391] br0: port 1(eth1) entered blocking state
+[   55.881360] br0: port 1(eth1) entered forwarding state
+[   55.924177] socfpga-dwmac ff804000.ethernet eth2: Link is Up - 1Gbps/Full - flow control off
+[   55.932758] IPv6: ADDRCONF(NETDEV_CHANGE): eth2: link becomes ready
+[   55.939352] br0: port 2(eth2) entered blocking state
+[   55.944327] br0: port 2(eth2) entered forwarding state
+
+2021-01-15 00:28:02,384:INFO:[   60.288345] ttyS1 - failed to request DMA
+

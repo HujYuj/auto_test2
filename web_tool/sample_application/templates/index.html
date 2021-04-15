@@ -1,0 +1,236 @@
+{% extends 'base.html' %}
+{% from "common/_macros.html" import import_static %}
+
+
+{% block title %}Test{% endblock %}
+
+{% block container %}
+    <div id="container">
+        <div id="logo-events" class="constrain clearfix">
+        </div>
+        <div class="content-wrapper clearfix row">
+            <div id="runnerDiv" style="height: 100%">
+                <div id="setting"class="sepatator" style="z-index: 1">
+                    <form id="executingForm" method="post" action="{{ '/executing' }}">
+                        <div id="runnerTabs">
+                            <div id="tmTestDiv">
+                                <table style="border:1px;">
+                                    <tr class="setting">
+                                        <td>
+                                            <label for="abil_slot">ABIL SLOT</label>
+                                            <select name="abil_slot" id="abil_slot" placeholder="ABIL SLOT" style="width: 82px;" value='{{ form.abil_slot }}'>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <label for="rru">RRU</label>
+                                            <!--input name="rru" id="rru" type="text" placeholder="RRU" value='{{ form.rru }}'-->
+                                            <select name="rru" id="rru" placeholder="RRU" style="width: 235px;" value='{{ form.rru }}'>
+                                            {% for rru in rru_list %}
+                                                <option value="{{ rru }}">{{ rru }}</option>
+                                            {% endfor %}
+                                        </td>
+                                        <td>
+                                            <label for="tdd_switch">TDD SWITCH</label>
+                                            <select name="tdd_switch" id="tdd_switch" placeholder="TDD SWITCH" style="width: 235px;" value='{{ form.tdd_switch }}'>
+                                                <option value="1116_0ms_a7">1116_0ms_a7</option>
+                                                <option value="1116_0ms_a8">1116_0ms_a8</option>
+                                                <option value="1116_3ms_a5" selected="selected">1116_3ms_a5</option>
+                                                <option value="1070">1070</option>
+                                                <!--option value="1037">1037</option-->
+                                                <option value="">No Sending</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <label for="case_type">CARRIER TYPE</label>
+                                            <select name="case_type" id="case_type" placeholder="CASE TYPE" style="width: 100px;" value='{{ form.case_type }}'>
+                                                <option value="1CC">Single Carrier</option>
+                                                <option value="2CC">Dual Carrier</option>
+                                                <option value="Split">Split</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <label for="dl_tm">DL TM</label>
+                                            <select name="dl_tm" id="dl_tm" placeholder="DL TM" style="width: 82px;" value='{{ form.dl_tm }}'>
+                                                <option value="TM1_1">TM1_1</option>
+                                                <option value="TM1_2">TM1_2</option>
+                                                <option value="TM2">TM2</option>
+                                                <option value="TM2A">TM2A</option>
+                                                <option value="TM3_1">TM3_1</option>
+                                                <option value="TM3_1A">TM3_1A</option>
+                                                <option value="TM3_2">TM3_2</option>
+                                                <option value="TM3_3">TM3_3</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <label for="ul_tm">UL TM</label>
+                                            <select name="ul_tm" id="ul_tm" placeholder="UL TM" style="width: 80px;" value='{{ form.ul_tm }}'>
+                                                <option value="A1-2">A1-2</option>
+                                                <option value="A1-5" selected="selected">A1-5</option>
+                                                <option value="A2-5">A2-5</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <!--tr class="setting">
+                                    </tr-->
+                                    <tr class="setting">
+                                        <td>
+                                            <label for="c1_bw">BW@Sample freq(MHz)</label>
+                                            <select name="c1_bw" id="c1_bw" placeholder="BW@Sample freq(MHz)" style="width: 172px;" value='{{ form.c1_bw }}'>
+                                            {% for bandwidth in bandwidth_list %}
+                                                <option value="{{ bandwidth }}">{{ bandwidth }}</option>
+                                            {% endfor %}
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <label for="c1_freq">FREQ (MHz)</label>
+                                            <input name="c1_freq" id="c1_freq" type="number" placeholder="For C1" value='{{ form.c1_freq }}'>
+                                        </td>
+                                        <td>
+                                            <label for="c1_power">POWER (dBm)</label>
+                                            <input name="c1_power" id="c1_power" type="number" placeholder="For C1" value='{{ form.c1_power }}'>
+                                        </td>
+                                        <td style="display: None">
+                                            <label for="c1_cell_id">Cell ID</label>
+                                            <input name="c1_cell_id" id="c1_cell_id" type="number" min="0" step="1" placeholder="For C1" value='{{ form.c1_cell_id }}'>
+                                        </td>
+                                        <td style="display: None">
+                                            <label for="c1_rnti">Rnti</label>
+                                            <input name="c1_rnti" id="c1_rnti" type="number" min="0" step="1" placeholder="For C1" value='{{ form.c1_rnti }}'>
+                                        </td>
+                                        <td>
+                                            <label for="c1_rboffset">RB Offset</label>
+                                            <input name="c1_rboffset" id="c1_rboffset" type="number" min="0" step="1" placeholder="For C1" value='{{ form.c1_rboffset }}'>
+                                        </td>
+                                        <td>
+                                            <label for="c1_power_backoff">Power Backoff (dBm)</label>
+                                            <input name="c1_power_backoff" id="c1_power_backoff" type="number" placeholder="For C1" value='{{ form.c1_power_backoff }}'>
+                                        </td>
+                                    </tr>
+                                    <tr id="2ndCarrier" style="display: none">
+                                        <td>
+                                            <label for="c2_bw">BW@Sample freq(MHz)</label>
+                                            <select name="c2_bw" id="c2_bw" placeholder="BW@Sample freq(MHz)" style="width: 172px;" value='{{ form.c2_bw }}'>
+                                            {% for bandwidth in bandwidth_list %}
+                                                <option value="{{ bandwidth }}">{{ bandwidth }}</option>
+                                            {% endfor %}
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <label for="c2_freq">FREQ (MHz)</label>
+                                            <input name="c2_freq" id="c2_freq" type="number" placeholder="For C2" value='{{ form.c2_freq }}'>
+                                        </td>
+                                        <td>
+                                            <label for="c2_power">POWER (dBm)</label>
+                                            <input name="c2_power" id="c2_power" type="number" placeholder="For C2" value='{{ form.c2_power }}'>
+                                        </td>
+                                        <td style="display: None">
+                                            <label for="c2_cell_id">Cell ID</label>
+                                            <input name="c2_cell_id" id="c2_cell_id" type="number" min="0" step="1" placeholder="For C2" value='{{ form.c2_cell_id }}'>
+                                        </td>
+                                        <td style="display: None">
+                                            <label for="c2_rnti">Rnti</label>
+                                            <input name="c2_rnti" id="c2_rnti" type="number" min="0" step="1" placeholder="For C2" value='{{ form.c2_rnti }}'>
+                                        </td>
+                                        <td>
+                                            <label for="c2_rboffset">RB Offset</label>
+                                            <input name="c2_rboffset" id="c2_rboffset" type="number" min="0" step="1" placeholder="For C2" value='{{ form.c2_rboffset }}'>
+                                        </td>
+                                        <td>
+                                            <label for="c2_power_backoff">Power Backoff (dBm)</label>
+                                            <input name="c2_power_backoff" id="c2_power_backoff" type="number" placeholder="For C2" value='{{ form.c2_power_backoff }}'>
+                                        </td>
+                                    </tr>
+                                    <tr class="control">
+                                       <td>
+                                           <select name="auto_generate" id="auto_generate" style="width: 172px;" value='{{ form.auto_generate }}'>
+                                               <option value="auto">Auto-Genrate XML</option>
+                                            {% for tm in tm_list %}
+                                               <option value="{{ tm }}">{{ tm }}</option>
+                                            {% endfor %}
+                                           </select>
+                                       </td>
+                                    </tr>
+                                </table>
+                                <table style="border:1px;">
+                                    <tr class="setting">
+                                        <td>
+                                            <label for="cycle_times">Cycel times</label>
+                                            <input name="cycle_times" id="cycle_times" style="width: 172px;" type="number" placeholder="Cycle times" value='100'>
+                                        </td>
+                                    </tr>
+                                    <tr class="control">
+                                        <td>
+                                            <label for="cpri_flag" style="height: 28.4px;" >CPRI SYNC TEST</label>
+                                            <input type="checkbox" name="cpri_flag" id="cpri_flag" style="'width: 180px;">
+                                        </td>
+
+                                        <td>
+                                            <label for="jesd_flag" style="height: 28.4px;" >JESD REG READ</label>
+                                            <input type="checkbox" name="jesd_flag" id="jesd_flag" style="'width: 180px;">
+                                        </td>
+                                        <!--<td>-->
+                                            <!--<label for="jesd_repeat_times" style="height: 28.4px;" >JESD repeat</label>-->
+                                            <!--<input name="jesd_repeat_times" id="jesd_repeat_times" type="number" style="'width: 180px;" value="3">-->
+                                        <!--</td>-->
+                                        <td>
+                                            <label for="dpdin_flag" style="height: 28.4px;" >POWER READ</label>
+                                            <input type="checkbox" name="dpdin_flag" id="dpdin_flag" style="'width: 180px;">
+                                        </td>
+                                        <!--<td>-->
+                                            <!--<label for="dpdin_repeat_times" style="height: 28.4px;" >Power repeat</label>-->
+                                            <!--<input name="dpdin_repeat_times" id="dpdin_repeat_times" type="number" style="'width: 180px;" value="3">-->
+                                        <!--</td>-->
+
+                                    </tr>
+                                    <tr class="setting">
+                                        <td>
+                                            <!--<label for="cpri_repeat_times" style="height: 28.4px;" >CPRI repeat</label>-->
+                                            <input name="cpri_repeat_times" id="cpri_repeat_times" type="number" style="'width: 180px;" placeholder="CPRI sync repeat">
+                                        </td>
+                                        <td>
+                                            <!--<label for="jesd_repeat_times" style="height: 28.4px;" >JESD repeat</label>-->
+                                            <input name="jesd_repeat_times" id="jesd_repeat_times" type="number" style="'width: 180px;" placeholder="JESD read repeat" >
+                                        </td>
+                                        <td>
+                                            <!--<label for="dpdin_repeat_times" style="height: 28.4px;" >Power repeat</label>-->
+                                            <input name="dpdin_repeat_times" id="dpdin_repeat_times" type="number" style="'width: 180px;" placeholder="Power read repeat">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+               </div>
+                <div id="control" class="sepatator overflow">
+                    <!--button id="saveBtn">Setting</button-->
+                    <button id="runBtn">Run</button>
+                    <!--button id="exeBtn">Execute</button-->
+                    <button id="refreshBtn">Refresh Log</button>
+                    <button id="downloadBtn">Download Log</button>
+                    <button id="toBottomBtn">To Bottom</button>
+                    <button id="toTopBtn">To Top</button>
+                    <button id="viewLogBtn">View REST Log</button>
+                </div>
+                <div id="logContentDiv">
+                    <textarea id="logContent" readonly="readonly" placeholder="Log Content" wrap="OFF"  spellcheck="false"></textarea>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    {{ import_static(type='css', filename_or_url='libs/selectize/selectize.min.css') }}
+    {{ import_static(type='js', filename_or_url='libs/selectize/selectize.min.js') }}
+    {{ import_static(type='js', filename_or_url='js/plugin/FilterableSelectize.js') }}
+    {{ import_static(type='css', filename_or_url='css/index.css') }}
+    {{ import_static(type='css', filename_or_url='css/env.css') }}
+    {{ import_static(type='css', filename_or_url='css/runner.css') }}
+    {{ import_static(type='css', filename_or_url='css/debug.css') }}
+    {{ import_static(type='js', filename_or_url='js/page/env.js') }}
+    {{ import_static(type='js', filename_or_url='js/page/debug.js') }}
+    {{ import_static(type='js', filename_or_url='js/index.js') }}
+{% endblock %}

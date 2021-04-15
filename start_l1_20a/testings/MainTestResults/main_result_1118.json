@@ -1,0 +1,1 @@
+{"total test": 586, "pass": 0, "fail on DUT not ready": 1, "fail on L1 TIME OUT": 0, "fail on L1 failure": 30, "CPRI sync fail": 0, "JESD reg fail": 0, "DPD power fail": 74, "fail both on JESD reg and DPD power": 480}

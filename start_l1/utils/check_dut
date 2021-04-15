@@ -1,0 +1,40 @@
+2021-04-01 18:23:04,141:INFO:ping 192.168.101.2 with 32 bytes
+2021-04-01 18:23:04,141:INFO:get output =>Reply from 192.168.101.2: bytes=32 time<1ms TTL=64
+2021-04-01 18:23:04,141:INFO:dut 192.168.101.2 connected
+2021-04-01 18:23:07,181:INFO:ping 192.168.101.3 with 32 bytes
+2021-04-01 18:23:07,181:INFO:get output =>Reply from 192.168.101.3: bytes=32 time<1ms TTL=64
+2021-04-01 18:23:07,181:INFO:dut 192.168.101.3 connected
+2021-04-01 18:23:10,251:INFO:ping 192.168.101.4 with 32 bytes
+2021-04-01 18:23:10,251:INFO:get output =>Reply from 192.168.101.4: bytes=32 time=1ms TTL=64
+2021-04-01 18:23:10,261:INFO:dut 192.168.101.4 connected
+2021-04-01 18:23:13,321:INFO:ping 192.168.101.5 with 32 bytes
+2021-04-01 18:23:13,321:INFO:get output =>Reply from 192.168.101.5: bytes=32 time=1ms TTL=64
+2021-04-01 18:23:13,321:INFO:dut 192.168.101.5 connected
+2021-04-01 18:23:13,321:INFO:all duts connected!
+2021-04-01 18:23:14,311:INFO:get product code => 475431A
+2021-04-01 18:23:17,990:INFO:192.168.101.2 testability readiness status is True
+2021-04-01 18:23:21,670:INFO:192.168.101.3 testability readiness status is True
+2021-04-01 18:23:25,350:INFO:192.168.101.4 testability readiness status is True
+2021-04-01 18:23:29,040:INFO:192.168.101.5 testability readiness status is True
+2021-04-01 18:23:29,040:INFO:Testability is ready!
+2021-04-01 18:23:32,939:INFO:uoam readiness status is true
+2021-04-01 18:26:41,189:INFO:ping 192.168.101.2 with 32 bytes
+2021-04-01 18:27:17,247:INFO:get output =>Reply from 192.168.101.2: bytes=32 time<1ms TTL=64
+2021-04-01 18:27:39,635:INFO:dut 192.168.101.2 connected
+2021-04-01 18:27:55,564:INFO:ping 192.168.101.3 with 32 bytes
+2021-04-01 18:27:55,994:INFO:get output =>Reply from 192.168.101.3: bytes=32 time=1ms TTL=64
+2021-04-01 18:27:56,674:INFO:dut 192.168.101.3 connected
+2021-04-01 18:28:09,763:INFO:ping 192.168.101.4 with 32 bytes
+2021-04-01 18:28:10,223:INFO:get output =>Reply from 192.168.101.4: bytes=32 time=1ms TTL=64
+2021-04-01 18:28:11,313:INFO:dut 192.168.101.4 connected
+2021-04-01 18:28:21,232:INFO:ping 192.168.101.5 with 32 bytes
+2021-04-01 18:28:21,572:INFO:get output =>Reply from 192.168.101.5: bytes=32 time=1ms TTL=64
+2021-04-01 18:28:22,362:INFO:dut 192.168.101.5 connected
+2021-04-01 18:29:03,290:INFO:all duts connected!
+2021-04-01 18:29:07,490:INFO:get product code => 475431A
+2021-04-01 18:29:58,346:INFO:192.168.101.2 testability readiness status is True
+2021-04-01 18:30:02,026:INFO:192.168.101.3 testability readiness status is True
+2021-04-01 18:30:05,716:INFO:192.168.101.4 testability readiness status is True
+2021-04-01 18:30:09,395:INFO:192.168.101.5 testability readiness status is True
+2021-04-01 18:30:09,395:INFO:Testability is ready!
+2021-04-01 18:30:36,333:INFO:uoam readiness status is true

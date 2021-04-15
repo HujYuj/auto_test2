@@ -1,0 +1,52 @@
+# DL status in MADE side, right status should be 0xFFFFFFFF
+/sbin/devmem 0xfc90010c
+# DL status in AFE0
+# right value of below four read cmds should be 0xAA 0x55 0xAA 0x55
+cd /var/tmp && chmod 777 *
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -w 0x15 -v 0x02
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x12a
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x12c
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -w 0x15 -v 0x00
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -w 0x15 -v 0x20
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x12a
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -r 0x12c
+cd /var/tmp && ./spiafe -d /dev/spidev43.0 -w 0x15 -v 0x00
+sleep 1
+# DL status in AFE1 right value of below four read cmds should be
+# 0xAA 0x55 0xAA 0x55
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -w 0x15 -v 0x02
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x12a
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x12c
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -w 0x15 -v 0x00
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -w 0x15 -v 0x20
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x12a
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -r 0x12c
+cd /var/tmp && ./spiafe -d /dev/spidev43.1 -w 0x15 -v 0x00
+sleep 1
+# UL JESD status check bit1:0=11b means OK"
+/sbin/devmem 0xfc980270
+/sbin/devmem 0xfc980274
+/sbin/devmem 0xfc980278
+/sbin/devmem 0xfc980294
+/sbin/devmem 0xfc98027C
+/sbin/devmem 0xfc980280
+/sbin/devmem 0xfc980288
+/sbin/devmem 0xfc98028C
+/sbin/devmem 0xfc980290
+/sbin/devmem 0xfc98026C
+/sbin/devmem 0xfc980264
+/sbin/devmem 0xfc980268
+sleep 1
+# UL int status value should be 0x60 or 0x2860
+/sbin/devmem 0xfc980094
+/sbin/devmem 0xfc980098
+/sbin/devmem 0xfc98009c
+/sbin/devmem 0xfc9800a0
+/sbin/devmem 0xfc9800a4
+/sbin/devmem 0xfc9800a8
+/sbin/devmem 0xfc9800ac
+/sbin/devmem 0xfc9800b0
+/sbin/devmem 0xfc9800b8
+/sbin/devmem 0xfc9800bc
+/sbin/devmem 0xfc9800c0
+/sbin/devmem 0xfc9800c4

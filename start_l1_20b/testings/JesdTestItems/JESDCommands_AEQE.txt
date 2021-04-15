@@ -1,0 +1,36 @@
+# echo "RX Alarm,correct should be 0x06,0x2860,0x8060"
+/sbin/devmem 0xfc90010c
+/sbin/devmem 0xFC900150
+/sbin/devmem 0xFC900154
+/sbin/devmem 0xFC900158
+/sbin/devmem 0xFC90015c
+/sbin/devmem 0xFC900160
+/sbin/devmem 0xFC900164
+/sbin/devmem 0xFC900168
+/sbin/devmem 0xFC90016c
+/sbin/devmem 0xFC900170
+/sbin/devmem 0xFC900174
+/sbin/devmem 0xFC900178
+/sbin/devmem 0xFC90017c
+/sbin/devmem 0xFC900180
+/sbin/devmem 0xFC900184
+/sbin/devmem 0xFC900188
+/sbin/devmem 0xFC90018c
+sleep 1
+# echo "TX JESD,0x12a read back shoud be AA, 0x12c read back should be 55"
+./spiafe -d /dev/spidev43.0 -w 0x15 -v 0x02
+./spiafe -d /dev/spidev43.0 -r 0x12a
+./spiafe -d /dev/spidev43.0 -r 0x12c
+./spiafe -d /dev/spidev43.0 -w 0x15 -v 0x00
+./spiafe -d /dev/spidev43.0 -w 0x15 -v 0x20
+./spiafe -d /dev/spidev43.0 -r 0x12a
+./spiafe -d /dev/spidev43.0 -r 0x12c
+./spiafe -d /dev/spidev43.0 -w 0x15 -v 0x00
+./spiafe -d /dev/spidev43.1 -w 0x15 -v 0x02
+./spiafe -d /dev/spidev43.1 -r 0x12a
+./spiafe -d /dev/spidev43.1 -r 0x12c
+./spiafe -d /dev/spidev43.1 -w 0x15 -v 0x00
+./spiafe -d /dev/spidev43.1 -w 0x15 -v 0x20
+./spiafe -d /dev/spidev43.1 -r 0x12a
+./spiafe -d /dev/spidev43.1 -r 0x12c
+./spiafe -d /dev/spidev43.1 -w 0x15 -v 0x00

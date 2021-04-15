@@ -1,0 +1,29 @@
+{
+    "rru_list": ["AEQB", "AEQE", "AEQP", "AEQJ", "AEQI", "AEQK", "AENB", "AEQV", "AEQY", "AEQQ", "AEQC", "AEQZ", "AEQY", "AQHA"],
+    "bandwidth_list": ["20", "40", "50", "60", "70", "80", "90", "100"],
+    "iq_capture_cmds" : {
+        "file_dir": "/user/toor4nsn",
+        "dl": {
+            "1": {
+                "name": "leka_tx_0.bin",
+                "cmd": "snapshot leka_tx_0 --file leka_tx_0.bin"
+            },
+            "2": {
+                "name": "leka_tx_0.bin",
+                "cmd": "snapshot leka_tx_1 --file leka_tx_1.bin"
+            }
+        },
+        "ul": {
+            "1": {
+                "name": "leka_rx_0_cell_1.bin",
+                "cmd": "snapshot leka_rx_0 --file leka_rx_0_cell_1.bin"
+            },
+            "2": {
+                "name": "leka_rx_1_cell_2.bin",
+                "cmd": "snapshot leka_rx_1 --file leka_rx_1_cell_2.bin"
+            }
+        }
+    },
+    "bler_check_cmds": ["devmem 0xDF6800D8 32 0x1", "devmem 0xDF6800D8 32 0x100 && devmem 0xDF6800C4 && devmem 0xDF6800C0"],
+    "binding_ip_for_route": "True"
+}

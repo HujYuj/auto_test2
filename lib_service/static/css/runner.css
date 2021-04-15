@@ -1,0 +1,8 @@
+#runnerDiv {
+	display: none;
+    background-color: inherit;
+}
+
+input[type="checkbox"] {
+    /*width: 180px;*/
+}

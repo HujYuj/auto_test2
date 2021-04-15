@@ -1,0 +1,7 @@
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.4)
+INFO:paramiko.transport:Auth banner: b'Access and use of this device  console  is for authorized users only. If you\nare not authorized by  Nokia Corporation  you have to close this  connection\nimmediately. Any unauthorized use or access attempts may be investigated and\nprosecuted  in  accordance  with applicable local laws.  Continuing with the\nlog-in process  implies that you  understand and acknowledge the above.  For\nquestions contact Nokia Corporation.\n\n--=---+---=--\n       \\\\___         NOKIA RFSW LINUX\n ---=---+-I-=---         TD-CPRI\n        |\\\\\n  ---=----+----=---\n        |\n        ^\nWind River Linux LTS 10.17.41.17\nTRM61.01.R10 jenkins-PROD_mMIMO_TRM6_release-1499 2021-01-24_07-48-22 rev 54090dc0\n'
+INFO:paramiko.transport:Authentication (password) successful!
+INFO:root:send command => /sbin/devmem 0x80301004
+INFO:main:send command => /sbin/devmem 0x80301004
+INFO:main:get output => 0x00000010
+INFO:main:CPRI LINK sync successfully!

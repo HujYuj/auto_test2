@@ -1,0 +1,407 @@
+2021-03-29 16:41:41,835:INFO:this is serial logger
+2021-03-29 16:46:17,964:INFO:
+U-Boot SPL 2017.09+gitAUTOINC+c0cfd0b4df-nokia-r153 (Dec 30 2020 - 06:41:33)
+MPU         1000000 kHz
+L3 main     400000 kHz
+Main VCO    2000000 kHz
+Per VCO     2000000 kHz
+EOSC1       125000 kHz
+HPS MMC     100 kHz
+UART        100000 kHz
+
+2021-03-29 16:46:24,966:INFO:DDR: emif_clear() failed
+DDR: 2048 MiB
+QSPI: Reference clock at 400000000 Hz
+Stratix10 boot info:
+	Last power-on reset triggered by SDM: true
+	Last reset type: SDM power-on reset
+	Debug reset triggered: false
+	CS DAP reset triggered: false
+Trying to boot from SPI
+RSU current image:  0x03000000
+RSU state:          0x00000000
+RSU error location: 0x00000000
+RSU error details:  0x00000000
+RSU SSBL partition SSBL.PROD000000 at address 0x02000000.
+
+
+U-Boot 2017.09+gitAUTOINC+c0cfd0b4df-nokia-r153 (Dec 30 2020 - 06:41:33 +0000)socfpga_stratix10_aeqb
+
+CPU:   Intel FPGA SoCFPGA Platform
+FPGA:  Intel FPGA Stratix 10
+Model: Nokia AEQB
+       Watchdog enabled
+MTest: Memory test flags not setted
+DRAM:  2 GiB
+De-Assert EMAC0, EMAC1, EMAC2...OK
+Stratix10 boot info:
+	Last power-on reset triggered by SDM: true
+	Last reset type: SDM power-on reset
+	Debug reset triggered: false
+	CS DAP reset triggered: false
+	Clear reset status:0x0
+MMC:   
+Using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Model: Nokia AEQB
+Net:   
+Warning: ethernet@ff800000 (eth0) using random MAC address - de:81:40:86:60:72
+eth0: ethernet@ff800000
+PowerOn or HW or L4WD0 reset, Reset the made
+Taking peripheral out of reset ... OK
+Configuring Marvell 88E1512 PHY ... OK
+Configuring Ethernet Switch ... OK
+Configuring to enable AXI bridge ... OK
+SF: Detected mt25qu02g with page size 256 Bytes, erase size 64 KiB, total 256 MiB
+Slot: selecting slot0
+SPTs are GOOD!!!
+CPBs are GOOD!!!
+Hit any key to stop autoboot:  3  2  1  0 
+gpio: pin 0 (gpio 0) value is 1
+SF: Detected mt25qu02g with page size 256 Bytes, erase size 64 KiB, total 256 MiB
+ubi0: attaching mtd2
+ubi0: scanning is finished
+ubi0: attached mtd2 (name "mtd=0", size 256 MiB)
+ubi0: PEB size: 65536 bytes (64 KiB), LEB size: 65408 bytes
+ubi0: min./max. I/O unit sizes: 1/256, sub-page size 1
+ubi0: VID header offset: 64 (aligned 64), data offset: 128
+ubi0: good PEBs: 4096, bad PEBs: 0, corrupted PEBs: 0
+ubi0: user volume: 2, internal volumes: 1, max. volumes count: 128
+ubi0: max/mean erase counter: 4/1, WL threshold: 4096, image sequence number: 631759626
+ubi0: available PEBs: 398, total reserved PEBs: 3698, PEBs reserved for bad PEB handling: 0
+Read 0 bytes from volume slot0_sw to 30000000
+No size specified -> Using max size (75888888)
+
+2021-03-29 16:46:54,982:INFO:## Copying 'fdt' subimage from FIT image at 30000000 ...
+crc32+ sha1+    Loading part 253 ... OK
+FDT fixup successful
+## Loading kernel from FIT Image at 30000000 ...
+   Using 'socfpga@0' configuration
+   Trying 'kernel@0' kernel subimage
+     Description:  Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x300000e4
+     Data Size:    14301696 Bytes = 13.6 MiB
+     Architecture: AArch64
+     OS:           Linux
+     Load Address: 0x01080000
+     Entry Point:  0x01080000
+     Hash algo:    crc32
+     Hash value:   76835e1c
+     Hash algo:    sha1
+     Hash value:   91deb835bc1ce5c0b4970c1d19448c64141deb4a
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+## Loading ramdisk from FIT Image at 30000000 ...
+   Using 'socfpga@0' configuration
+   Trying 'rootfs@0' ramdisk subimage
+     Description:  Root Filesystem CPIO archive Gzipped
+     Type:         RAMDisk Image
+     Compression:  uncompressed
+     Data Start:   0x30da832c
+     Data Size:    61567068 Bytes = 58.7 MiB
+     Architecture: AArch64
+     OS:           Linux
+     Load Address: 0x20000000
+     Entry Point:  unavailable
+     Hash algo:    crc32
+     Hash value:   4a4de9e0
+     Hash algo:    sha1
+     Hash value:   4e88f32308bae8ef8a29b45ea39c7e7da9dabfac
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+   Loading ramdisk from 0x30da832c to 0x20000000
+## Flattened Device Tree blob at 08000000
+   Booting using the fdt blob at 0x8000000
+   Loading Kernel Image ... OK
+   Loading Ramdisk to 15148000, end 18bff05c ... OK
+   reserving fdt memory region: addr=8000000 size=9000
+   Loading Device Tree to 000000001513c000, end 0000000015147fff ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.12.29-nokia-r91 (oe-user@oe-host) (gcc version 7.3.0 (GCC) ) #1 SMP PREEMPT Wed Dec 30 09:40:46 UTC 2020
+[    0.000000] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000] Machine model: SoCFPGA Stratix 10 AEQB
+[    0.000000] earlycon: uart0 at MMIO32 0x00000000ffc02000 (options '115200n8')
+[    0.000000] bootconsole [uart0] enabled
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] Reserved memory: created DMA memory pool at 0x0000000000000000, size 16 MiB
+[    0.000000] OF: reserved mem: initialized node svcbuffer@0, compatible id shared-dma-pool
+[    0.000000] cma: Reserved 16 MiB at 0x0000000068400000
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv65535.65535 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.0
+[    0.000000] percpu: Embedded 22 pages/cpu @(____ptrval____) s52760 r8192 d29160 u90112
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 420840
+[    0.000000] Kernel command line: earlyprintk earlycon syscon_enable=1 console=ttyS0,115200n8 rdinit=/sbin/init rw initrd=0x20000000,0x8000000 runningVolName=slot0_sw
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.000000] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.000000] Memory: 1451340K/1710080K available (9404K kernel code, 1166K rwdata, 2480K rodata, 896K init, 715K bss, 242356K reserved, 16384K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     modules : 0xffff000000000000 - 0xffff000008000000   (   128 MB)
+[    0.000000]     vmalloc : 0xffff000008000000 - 0xffff7dffbfff0000   (129022 GB)
+[    0.000000]       .text : 0x(____ptrval____) - 0x(____ptrval____)   (  9408 KB)
+[    0.000000]     .rodata : 0x(____ptrval____) - 0x(____ptrval____)   (  2496 KB)
+[    0.000000]       .init : 0x(____ptrval____) - 0x(____ptrval____)   (   896 KB)
+[    0.000000]       .data : 0x(____ptrval____) - 0x(____ptrval____)   (  1167 KB)
+[    0.000000]        .bss : 0x(____ptrval____) - 0x(____ptrval____)   (   716 KB)
+[    0.000000]     fixed   : 0xffff7dfffe7fb000 - 0xffff7dfffec00000   (  4116 KB)
+[    0.000000]     PCI I/O : 0xffff7dfffee00000 - 0xffff7dffffe00000   (    16 MB)
+[    0.000000]     vmemmap : 0xffff7e0000000000 - 0xffff800000000000   (  2048 GB maximum)
+[    0.000000]               0xffff7e0000040000 - 0xffff7e0001a58000   (    26 MB actual)
+[    0.000000]     memory  : 0xffff800001000000 - 0xffff800069600000   (  1670 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] ftrace: allocating 31840 entries in 125 pages
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] NR_IRQS:64 nr_irqs:64 0
+[    0.000000] GIC: Using split EOI/Deactivate mode
+[    0.000000] arch_timer: cp15 timer(s) running at 400.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x5c4093a7d1, max_idle_ns: 440795210635 ns
+[    0.000005] sched_clock: 56 bits at 400MHz, resolution 2ns, wraps every 4398046511103ns
+[    0.008187] Console: colour dummy device 80x25
+[    0.012642] Calibrating delay loop (skipped), value calculated using timer frequency.. 800.00 BogoMIPS (lpj=1600000)
+[    0.023128] pid_max: default: 32768 minimum: 301
+[    0.027809] Security Framework initialized
+[    0.032047] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.038728] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.061924] ASID allocator initialised with 32768 entries
+[    0.076974] EFI services will not be available.
+[    0.089523] smp: Bringing up secondary CPUs ...
+[    0.122195] Detected VIPT I-cache on CPU1
+[    0.122256] CPU1: Booted secondary processor [410fd034]
+[    0.150233] Detected VIPT I-cache on CPU2
+[    0.150259] CPU2: Booted secondary processor [410fd034]
+[    0.178309] Detected VIPT I-cache on CPU3
+[    0.178334] CPU3: Booted secondary processor [410fd034]
+[    0.178396] smp: Brought up 1 node, 4 CPUs
+[    0.210062] SMP: Total of 4 processors activated.
+[    0.214756] CPU features: detected feature: 32-bit EL0 Support
+[    0.220572] CPU features: detected feature: Kernel page table isolation (KPTI)
+[    0.230364] CPU: All CPU(s) started at EL2
+[    0.234467] alternatives: patching kernel code
+[    0.240157] devtmpfs: initialized
+[    0.247308] DMI not present or invalid.
+[    0.251295] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.261014] futex hash table entries: 1024 (order: 5, 131072 bytes)
+[    0.268231] xor: measuring software checksum speed
+[    0.313077]    8regs     :  1910.000 MB/sec
+[    0.357311]    8regs_prefetch:  1701.000 MB/sec
+[    0.401891]    32regs    :  2342.000 MB/sec
+[    0.446124]    32regs_prefetch:  1975.000 MB/sec
+[    0.450729] xor: using function: 32regs (2342.000 MB/sec)
+[    0.456878] NET: Registered protocol family 16
+[    0.462220] cpuidle: using governor ladder
+[    0.466331] cpuidle: using governor menu
+[    0.470401] vdso: 2 pages (1 code @ (____ptrval____), 1 data @ (____ptrval____))
+[    0.477782] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.491502] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.497626] dw_wdt: Synopsys DesignWare Watchdog Driver is registered at arch_initcall level
+[    0.510683] dw_wdt: +++ skip updating timeout to wdd.
+[    0.523186] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    0.597812] raid6: int64x1  gen()   339 MB/s
+[    0.670278] raid6: int64x1  xor()   375 MB/s
+[    0.742755] raid6: int64x2  gen()   587 MB/s
+[    0.815164] raid6: int64x2  xor()   505 MB/s
+[    0.887607] raid6: int64x4  gen()   887 MB/s
+[    0.960041] raid6: int64x4  xor()   623 MB/s
+[    1.032131] raid6: int64x8  gen()   824 MB/s
+[    1.104230] raid6: int64x8  xor()   625 MB/s
+[    1.176346] raid6: neonx1   gen()   614 MB/s
+[    1.248433] raid6: neonx1   xor()   638 MB/s
+[    1.320541] raid6: neonx2   gen()   994 MB/s
+[    1.392614] raid6: neonx2   xor()   868 MB/s
+[    1.464751] raid6: neonx4   gen()  1293 MB/s
+[    1.536804] raid6: neonx4   xor()   995 MB/s
+[    1.608923] raid6: neonx8   gen()  1305 MB/s
+[    1.681023] raid6: neonx8   xor()  1004 MB/s
+[    1.685282] raid6: using algorithm neonx8 gen() 1305 MB/s
+[    1.690662] raid6: .... xor() 1004 MB/s, rmw enabled
+[    1.695611] raid6: using intx1 recovery algorithm
+[    1.701007] vgaarb: loaded
+[    1.704251] Intel Service Layer Driver Initialized
+[    1.709373] SCSI subsystem initialized
+[    1.713340] usbcore: registered new interface driver usbfs
+[    1.718851] usbcore: registered new interface driver hub
+[    1.724206] usbcore: registered new device driver usb
+[    1.729725] pps_core: LinuxPPS API ver. 1 registered
+[    1.734681] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.743792] PTP clock support registered
+[    1.747861] EDAC MC: Ver: 3.0.0
+[    1.751242] dmi: Firmware registration failed.
+[    1.755754] FPGA manager framework
+[    1.759280] fpga-region soc:base_fpga_region: FPGA Region probed
+[    1.766562] clocksource: Switched to clocksource arch_sys_counter
+[    1.869704] NET: Registered protocol family 2
+[    1.874773] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+[    1.882109] TCP bind hash table entries: 16384 (order: 6, 262144 bytes)
+[    1.889406] TCP: Hash tables configured (established 16384 bind 16384)
+[    1.896061] UDP hash table entries: 1024 (order: 3, 32768 bytes)
+[    1.902098] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+[    1.908778] NET: Registered protocol family 1
+[    1.913791] RPC: Registered named UNIX socket transport module.
+[    1.919700] RPC: Registered udp transport module.
+[    1.924392] RPC: Registered tcp transport module.
+[    1.929083] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.935739] Trying to unpack rootfs image as initramfs...
+
+2021-03-29 16:47:32,031:INFO:
+Access and use of this device  console  is for authorized users only. If you
+are not authorized by  Nokia Corporation  you have to close this  connection
+immediately. Any unauthorized use or access attempts may be investigated and
+prosecuted  in  accordance  with applicable local laws.  Continuing with the
+log-in process  implies that you  understand and acknowledge the above.  For
+questions contact Nokia Corporation.
+
+--=---+---=--
+       \___         NOKIA RFSW LINUX
+ ---=---+-I-=---          ECPRI
+        |\
+  ---=----+----=---
+        |
+        ^
+Wind River Linux LTS 10.17.41.17
+SRM61.02.R11 jenkins-PROD_mMIMO_SRM6_release-1137 2021-03-02_15-42-37 rev 083e94f4
+stratix10-aeqb login: 
+2021-03-29 16:47:37,034:INFO:[   44.263892] fpga_manager fpga0: writing aeqb-bitstream.core.rbf to Stratix10 SOC FPGA Manager
+
+2021-03-29 16:48:02,048:INFO:[   67.106549] Stratix10 SoC FPGA manager soc:fpga-mgr@0: Requesting full reconfiguration.
+[   68.745753] altera-i2c f9001800.i2c: Altera SoftIP I2C Probe Complete
+[   68.783738] altera-i2c f90018c0.i2c: Altera SoftIP I2C Probe Complete
+[   68.809557] ema 810a0000.ema: Instance 0
+[   68.817116] ema 810a0000.ema: driver probed
+[   69.088367] bcn_driver 81100000.bcn: BCN driver: Device 'bcn0' probed and ready!
+
+2021-03-29 16:48:07,051:INFO:[   71.396686] dlul 80080000.dlul: instance 0
+[   71.404185] dlul 80080000.dlul: Component 0xffffffff version 0x605
+[   71.411656] dlul 80080000.dlul: DLUL Driver Version: 0.0.9 DLUL HAL Version: 0.6.5.
+[   71.419892] dlul 80080000.dlul: device probed successfully
+[   71.428061] dlul: driver inserted
+[   71.470866] XLGX: HW Component: 0x1 Version: 1.27 Build: 3.20.9 (00000001:0001001b:00031409)
+[   71.480291] XLGX: No of MAC ports: 5, No of BIP ports: 6 (00000005:00000006)
+[   71.499164] XLGX: Host port HW Component: 0x25203 Version: 2.13 Build: 3.4.0 Reg-chart: 1431655765 (00025203:0002000d:00030400:55555555)
+[   71.565836] XLGX: Pass all VLAN filter rule set for non tagged VLAN frames (VLAN ID: 0).
+[   71.581536] XLGX: Device probed and ready!
+[   71.587360] XLGX: HW Component: 0x1 Version: 1.27 Build: 3.20.9 (00000001:0001001b:00031409)
+[   71.604780] XLGX: No of MAC ports: 5, No of BIP ports: 6 (00000005:00000006)
+[   71.618177] XLGX: Host port HW Component: 0x25203 Version: 2.13 Build: 3.4.0 Reg-chart: 1431655765 (00025203:0002000d:00030400:55555555)
+[   71.695648] XLGX: Pass all VLAN filter rule set for non tagged VLAN frames (VLAN ID: 0).
+[   71.706798] XLGX: Device probed and ready!
+[   71.715563] XLGX: Creating Intel 10/25G MAC instance for port 4
+[   71.722255] XLGX: configured default VLAN ID 0 to queue 0 for non VLAN tagged frames in MAC port 4.
+[   71.731441] XLGX: Pass all VLAN filter rule for ports set.
+[   71.738477] XLGX: MAC wrapper queue configuration: RX: [12, 10, 10] (kB), TX: [6, 5, 5] (kB) [P0, P1, P2].
+[   71.748347] xlgx_ix25gmac_driver 8010c000.mac_made3: ETS (TX) priority mapping (up2tc): [0,0,0,0,1,1,2,2]
+[   71.761731]  (null): XLGX MAC port 4 using MAC address 0200c0a8020e.
+[   71.761849] XLGX: MAC port and MAC Wrapper instance for port 4 are optimized
+[   71.803391] XLGX: Creating Intel 10/25G MAC instance for port 3
+[   71.812558] XLGX: configured default VLAN ID 0 to queue 0 for non VLAN tagged frames in MAC port 3.
+[   71.822418] XLGX: Pass all VLAN filter rule for ports set.
+[   71.828370] XLGX: MAC wrapper queue configuration: RX: [12, 10, 10] (kB), TX: [6, 5, 5] (kB) [P0, P1, P2].
+[   71.838202] xlgx_ix25gmac_driver 80108000.mac_made2: ETS (TX) priority mapping (up2tc): [0,0,0,0,1,1,2,2]
+[   71.848740]  (null): XLGX MAC port 3 using MAC address 0200c0a8020d.
+[   71.848888] XLGX: MAC port and MAC Wrapper instance for port 3 are optimized
+[   71.893624] XLGX: Creating Intel 10/25G MAC instance for port 2
+[   71.900220] XLGX: configured default VLAN ID 0 to queue 0 for non VLAN tagged frames in MAC port 2.
+[   71.913067] XLGX: Pass all VLAN filter rule for ports set.
+[   71.918854] XLGX: MAC wrapper queue configuration: RX: [12, 10, 10] (kB), TX: [6, 5, 5] (kB) [P0, P1, P2].
+[   71.928675] xlgx_ix25gmac_driver 80104000.mac_made1: ETS (TX) priority mapping (up2tc): [0,0,0,0,1,1,2,2]
+[   71.939236]  (null): XLGX MAC port 2 using MAC address 0200c0a8020c.
+[   71.939328] XLGX: MAC port and MAC Wrapper instance for port 2 are optimized
+[   71.984841] XLGX: Creating Intel 10/25G MAC instance for port 1
+[   71.991111] XLGX: configured default VLAN ID 0 to queue 0 for non VLAN tagged frames in MAC port 1.
+[   72.003665] XLGX: Pass all VLAN filter rule for ports set.
+[   72.009275] XLGX: MAC wrapper queue configuration: RX: [12, 10, 10] (kB), TX: [6, 5, 5] (kB) [P0, P1, P2].
+[   72.019046] xlgx_ix25gmac_driver 80100000.mac_made0: ETS (TX) priority mapping (up2tc): [0,0,0,0,1,1,2,2]
+[   72.029606]  (null): XLGX MAC port 1 using MAC address 0200c0a8020b.
+[   72.029693] XLGX: MAC port and MAC Wrapper instance for port 1 are optimized
+[   72.084184] XLGX: Creating Intel 10/25G MAC instance for port 0
+[   72.090498] XLGX: configured default VLAN ID 0 to queue 0 for non VLAN tagged frames in MAC port 0.
+[   72.100587] XLGX: Pass all VLAN filter rule for ports set.
+[   72.106489] XLGX: MAC wrapper queue configuration: RX: [12, 10, 10] (kB), TX: [6, 5, 5] (kB) [P0, P1, P2].
+[   72.116233] xlgx_ix25gmac_driver 80120000.mac_sm0: ETS (TX) priority mapping (up2tc): [0,0,0,0,1,1,2,2]
+[   72.126663]  (null): XLGX MAC port 0 using MAC address 0200c0a8020a.
+[   72.167828] XLGX: Creating Intel 10/25G MAC instance for port 4
+[   72.180623] XLGX: configured default VLAN ID 0 to queue 0 for non VLAN tagged frames in MAC port 4.
+[   72.190533] XLGX: Pass all VLAN filter rule for ports set.
+[   72.196224] XLGX: MAC wrapper queue configuration: RX: [12, 10, 10] (kB), TX: [6, 5, 5] (kB) [P0, P1, P2].
+[   72.206067] xlgx_ix25gmac_driver 8011c000.mac_made7: ETS (TX) priority mapping (up2tc): [0,0,0,0,1,1,2,2]
+[   72.216072]  (null): XLGX MAC port 4 using MAC address 0200c0a80213.
+[   72.216150] XLGX: MAC port and MAC Wrapper instance for port 4 are optimized
+[   72.255435] XLGX: Creating Intel 10/25G MAC instance for port 3
+[   72.261750] XLGX: configured default VLAN ID 0 to queue 0 for non VLAN tagged frames in MAC port 3.
+[   72.271312] XLGX: Pass all VLAN filter rule for ports set.
+[   72.276935] XLGX: MAC wrapper queue configuration: RX: [12, 10, 10] (kB), TX: [6, 5, 5] (kB) [P0, P1, P2].
+[   72.286714] xlgx_ix25gmac_driver 80118000.mac_made6: ETS (TX) priority mapping (up2tc): [0,0,0,0,1,1,2,2]
+[   72.297169]  (null): XLGX MAC port 3 using MAC address 0200c0a80212.
+[   72.297267] XLGX: MAC port and MAC Wrapper instance for port 3 are optimized
+[   72.339476] XLGX: Creating Intel 10/25G MAC instance for port 2
+[   72.345851] XLGX: configured default VLAN ID 0 to queue 0 for non VLAN tagged frames in MAC port 2.
+[   72.355721] XLGX: Pass all VLAN filter rule for ports set.
+[   72.361495] XLGX: MAC wrapper queue configuration: RX: [12, 10, 10] (kB), TX: [6, 5, 5] (kB) [P0, P1, P2].
+[   72.371328] xlgx_ix25gmac_driver 80114000.mac_made5: ETS (TX) priority mapping (up2tc): [0,0,0,0,1,1,2,2]
+[   72.382135]  (null): XLGX MAC port 2 using MAC address 0200c0a80211.
+[   72.382233] XLGX: MAC port and MAC Wrapper instance for port 2 are optimized
+[   72.427964] XLGX: Creating Intel 10/25G MAC instance for port 1
+[   72.434226] XLGX: configured default VLAN ID 0 to queue 0 for non VLAN tagged frames in MAC port 1.
+[   72.444109] XLGX: Pass all VLAN filter rule for ports set.
+[   72.449998] XLGX: MAC wrapper queue configuration: RX: [12, 10, 10] (kB), TX: [6, 5, 5] (kB) [P0, P1, P2].
+[   72.459850] xlgx_ix25gmac_driver 80110000.mac_made4: ETS (TX) priority mapping (up2tc): [0,0,0,0,1,1,2,2]
+[   72.470021]  (null): XLGX MAC port 1 using MAC address 0200c0a80210.
+[   72.470109] XLGX: MAC port and MAC Wrapper instance for port 1 are optimized
+[   72.511825] XLGX: Creating Intel 10/25G MAC instance for port 0
+[   72.518202] XLGX: configured default VLAN ID 0 to queue 0 for non VLAN tagged frames in MAC port 0.
+[   72.528104] XLGX: Pass all VLAN filter rule for ports set.
+[   72.533905] XLGX: MAC wrapper queue configuration: RX: [12, 10, 10] (kB), TX: [6, 5, 5] (kB) [P0, P1, P2].
+[   72.543628] xlgx_ix25gmac_driver 80124000.mac_sm1: ETS (TX) priority mapping (up2tc): [0,0,0,0,1,1,2,2]
+[   72.554187]  (null): XLGX MAC port 0 using MAC address 0200c0a8020f.
+[   72.586004] XLGX IP driver: Init done
+[   72.631932] BIP IP driver: BIP HW Component: 0x25301 Version: 2.73 Build: 3.11.3 Streams: 32 Register optimization LightBIP: 0 HW streams: 32 HW feature optimization HW Light: 73159 (00025301:00020049:00030b03:00000020:00000000:00000020:00011dc7)
+[   72.682806] bip_driver 80380000.bip_sm0: BIP IP driver: Device 'bip0' probed and ready!
+[   72.692291] BIP IP driver: BIP HW Component: 0x25301 Version: 2.73 Build: 3.11.3 Streams: 16 Register optimization LightBIP: 2 HW streams: 16 HW feature optimization HW Light: 73213 (00025301:00020049:00030b03:00000010:00000002:00000010:00011dfd)
+[   72.742901] bip_driver 80180000.bip_made0: BIP IP driver: Device 'bip1' probed and ready!
+[   72.752261] BIP IP driver: BIP HW Component: 0x25301 Version: 2.73 Build: 3.11.3 Streams: 16 Register optimization LightBIP: 2 HW streams: 16 HW feature optimization HW Light: 73213 (00025301:00020049:00030b03:00000010:00000002:00000010:00011dfd)
+[   72.794813] bip_driver 801c0000.bip_made1: BIP IP driver: Device 'bip2' probed and ready!
+[   72.804222] BIP IP driver: BIP HW Component: 0x25301 Version: 2.73 Build: 3.11.3 Streams: 16 Register optimization LightBIP: 2 HW streams: 16 HW feature optimization HW Light: 73213 (00025301:00020049:00030b03:00000010:00000002:00000010:00011dfd)
+[   72.846816] bip_driver 80200000.bip_made2: BIP IP driver: Device 'bip3' probed and ready!
+[   72.856480] BIP IP driver: BIP HW Component: 0x25301 Version: 2.73 Build: 3.11.3 Streams: 16 Register optimization LightBIP: 2 HW streams: 16 HW feature optimization HW Light: 73213 (00025301:00020049:00030b03:00000010:00000002:00000010:00011dfd)
+[   72.902842] bip_driver 80240000.bip_made3: BIP IP driver: Device 'bip4' probed and ready!
+[   72.912222] BIP IP driver: BIP HW Component: 0x25301 Version: 2.73 Build: 3.11.3 Streams: 16 Register optimization LightBIP: 0 HW streams: 16 HW feature optimization HW Light: 73159 (00025301:00020049:00030b03:00000010:00000000:00000010:00011dc7)
+[   72.954883] bip_driver 80440000.bip_tc0: BIP IP driver: Device 'bip5' probed and ready!
+[   72.964118] BIP IP driver: BIP HW Component: 0x25301 Version: 2.73 Build: 3.11.3 Streams: 32 Register optimization LightBIP: 0 HW streams: 32 HW feature optimization HW Light: 73159 (00025301:00020049:00030b03:00000020:00000000:00000020:00011dc7)
+[   73.014884] bip_driver 803c0000.bip_sm1: BIP IP driver: Device 'bip6' probed and ready!
+[   73.023960] BIP IP driver: BIP HW Component: 0x25301 Version: 2.73 Build: 3.11.3 Streams: 16 Register optimization LightBIP: 2 HW streams: 16 HW feature optimization HW Light: 73213 (00025301:00020049:00030b03:00000010:00000002:00000010:00011dfd)
+[   73.062875] bip_driver 80280000.bip_made4: BIP IP driver: Device 'bip7' probed and ready!
+[   73.073034] BIP IP driver: BIP HW Component: 0x25301 Version: 2.73 Build: 3.11.3 Streams: 16 Register optimization LightBIP: 2 HW streams: 16 HW feature optimization HW Light: 73213 (00025301:00020049:00030b03:00000010:00000002:00000010:00011dfd)
+[   73.118852] bip_driver 802c0000.bip_made5: BIP IP driver: Device 'bip8' probed and ready!
+[   73.128172] BIP IP driver: BIP HW Component: 0x25301 Version: 2.73 Build: 3.11.3 Streams: 16 Register optimization LightBIP: 2 HW streams: 16 HW feature optimization HW Light: 73213 (00025301:00020049:00030b03:00000010:00000002:00000010:00011dfd)
+[   73.166877] bip_driver 80300000.bip_made6: BIP IP driver: Device 'bip9' probed and ready!
+[   73.176278] BIP IP driver: BIP HW Component: 0x25301 Version: 2.73 Build: 3.11.3 Streams: 16 Register optimization LightBIP: 2 HW streams: 16 HW feature optimization HW Light: 73213 (00025301:00020049:00030b03:00000010:00000002:00000010:00011dfd)
+[   73.222659] bip_driver 80340000.bip_made7: BIP IP driver: Device 'bip10' probed and ready!
+[   73.231634] BIP IP driver: BIP HW Component: 0x25301 Version: 2.73 Build: 3.11.3 Streams: 16 Register optimization LightBIP: 0 HW streams: 16 HW feature optimization HW Light: 73159 (00025301:00020049:00030b03:00000010:00000000:00000010:00011dc7)
+[   73.270670] bip_driver 80480000.bip_tc1: BIP IP driver: Device 'bip11' probed and ready!
+[   73.358227] xlgx_ix25gmac_driver 80120000.mac_sm0: SerDes driver not found from DTS, update DTS and SW to include Stratix10 SerDes driver. Info: -38
+[   73.379062] xlgx_ix25gmac_driver 80124000.mac_sm1: SerDes driver not found from DTS, update DTS and SW to include Stratix10 SerDes driver. Info: -38
+[   73.404190] xlgx_ix25gmac_driver 80104000.mac_made1: SerDes driver not found from DTS, update DTS and SW to include Stratix10 SerDes driver. Info: -38
+[   73.424998] xlgx_ix25gmac_driver 80100000.mac_made0: SerDes driver not found from DTS, update DTS and SW to include Stratix10 SerDes driver. Info: -38
+[   73.445361] xlgx_ix25gmac_driver 80118000.mac_made6: SerDes driver not found from DTS, update DTS and SW to include Stratix10 SerDes driver. Info: -38
+[   73.467250] xlgx_ix25gmac_driver 8011c000.mac_made7: SerDes driver not found from DTS, update DTS and SW to include Stratix10 SerDes driver. Info: -38
+[   73.487799] xlgx_ix25gmac_driver 8010c000.mac_made3: SerDes driver not found from DTS, update DTS and SW to include Stratix10 SerDes driver. Info: -38
+[   73.508155] xlgx_ix25gmac_driver 80108000.mac_made2: SerDes driver not found from DTS, update DTS and SW to include Stratix10 SerDes driver. Info: -38
+[   73.528764] xlgx_ix25gmac_driver 80110000.mac_made4: SerDes driver not found from DTS, update DTS and SW to include Stratix10 SerDes driver. Info: -38
+[   73.549568] xlgx_ix25gmac_driver 80114000.mac_made5: SerDes driver not found from DTS, update DTS and SW to include Stratix10 SerDes driver. Info: -38
+[   73.949357] xlgx_ix25gmac_driver 80120000.mac_sm0: SerDes driver not found from DTS, update DTS and SW to include Stratix10 SerDes driver. Info: -38
+[   73.994759] xlgx_ix25gmac_driver 80124000.mac_sm1: SerDes driver not found from DTS, update DTS and SW to include Stratix10 SerDes driver. Info: -38
+
+2021-03-29 16:48:18,061:INFO:[   84.588916] ttyS1 - failed to request DMA
+[   85.156202] xlgx_driver 800c8000.xlgx: XLGX: Local PTP Clock Identifier configured to: 979751feff5bec48
+

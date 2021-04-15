@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	{% include 'common/_head.html' %}
+</head>
+<body>
+	{% include 'common/_header.html' %}
+    {% block container %}{% endblock %}
+	{% include 'common/_footer.html' %}
+    {% block scripts %}{% endblock %}
+    
+    <div id="dialog" title="Warnning"></div>
+    <div id="confirmDialog" title="Confirm"></div>
+    
+    <div id="modal" style="display:none">
+        <div id="loading" class="loader"></div>
+    </div>
+
+    <div id="updateDialogDiv" title="Update" style="display:none"></div>
+    <div id="updateMessageDiv" title="Version Information" style="display:none"></div>
+    <div id="updateForceConfirmDiv" title="Force Update Confirm " style="display:none"></div>
+    <div id="updateProcessDiv" title="Update Process">
+        <div class="progress-label"></div>
+        <div id="progressbar"></div>
+    </div>
+</body>
+</html>
